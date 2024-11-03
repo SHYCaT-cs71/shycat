@@ -6,5 +6,7 @@ Roster:
 * Shelby Grasso (Product Owner)
 * Hanza Hashmi
 * Yu Lai
-* Tyler Malka (Scrum Master)
 * Christina Molodowitch
+  and
+* Tyler Malka (Scrum Master)
+
