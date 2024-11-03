@@ -10,3 +10,5 @@ Roster:
   and
 * Tyler Malka (Scrum Master)
 
+JIRA board:   
+https://evilore.atlassian.net/jira/software/projects/SHY/boards/1/backlog
