@@ -24,9 +24,6 @@ https://github.com/SHYCaT-cs71/shycat/blob/main/Shycat%20Project%20Vision.pdf
 Detailed User Persona link:
 https://www.figma.com/design/tJYam6D8osfEJDzZgDfX2o/SHYCaT_persona?node-id=0-1&node-type=canvas&t=zd44JGXoeKK9zDvC-0
 
-Three stakeholders
-...
-
 ### Definition of Ready:
 * Refined: Does everyone agree on what the item entails and how it will be implemented?
 * Actionable: Can the developers begin working on the item immediately?  Are there any external dependencies that need to be resolved?
