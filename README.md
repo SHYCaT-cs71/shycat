@@ -12,6 +12,9 @@ CSCI E-71 Final project
 - and
 - Tyler Malka (Scrum Master)
 
+Link to Slack channel:  
+https://agilesoftwarecourse.slack.com/archives/C07UJ3T3ZCY
+
 JIRA board:  
 https://evilore.atlassian.net/jira/software/projects/SHY/boards/1/backlog
 
