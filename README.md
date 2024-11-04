@@ -9,7 +9,7 @@ CSCI E-71 Final project
 - Hanza Hashmi
 - Yu Lai
 - Christina Molodowitch
-  and
+- and
 - Tyler Malka (Scrum Master)
 
 JIRA board:  
