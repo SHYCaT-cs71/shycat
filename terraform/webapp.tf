@@ -8,6 +8,7 @@ resource "aws_amplify_app" "shycat_webapp" {
 
   environment_variables = {
     API_ENDPOINT = "test"
+    AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }
 
@@ -18,8 +19,11 @@ resource "aws_amplify_branch" "shycat_webapp_main" {
   framework = "React"
   stage     = "PRODUCTION"
 
+  enable_auto_build = true
+
   environment_variables = {
     API_ENDPOINT = "test"
+    AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }
 
