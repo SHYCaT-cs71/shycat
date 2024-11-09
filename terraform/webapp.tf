@@ -4,7 +4,7 @@ resource "aws_amplify_app" "shycat_webapp" {
   name       = var.app_name
   repository = "https://github.com/SHYCaT-cs71/shycat"
 
-  access_token = var.access_token
+  access_token = var.github_access_token
 
   environment_variables = {
     API_ENDPOINT = "test"

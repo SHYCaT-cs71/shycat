@@ -10,3 +10,4 @@
 .idea
 terraform/api.tf
 terraform/network.tf
+terraform/variable_secrets.tf
