@@ -1,0 +1,12 @@
+**/python
+*.terraform*
+*/zip/
+*bootstrap*
+**/__pycache__*
+**zip*
+**/test*
+.DS_Store
+**/.env
+.idea
+terraform/api.tf
+terraform/network.tf
