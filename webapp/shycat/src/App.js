@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Accordion from './components/Accordion';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
-        <h1>Welcome to Shycat</h1>
-        <Accordion />
+        <h1>Welcome to SHYC&T</h1>
       </header>
     </div>
   );

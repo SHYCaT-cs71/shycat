@@ -6,3 +6,11 @@ test('renders welcome message', () => {
   const welcomeElement = screen.getByText(/welcome to shycat/i);
   expect(welcomeElement).toBeInTheDocument();
 });
+
+
+test('renders navbar', () => {
+  render(<App />);
+
+  const navbarElement = screen.getAllByRole("navigation");
+  expect(navbarElement[0]).toBeInTheDocument();
+});
