@@ -31,7 +31,6 @@ https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8d
 ## Daily Scrums
 
 ### Daily Scrum 2024-11-10
-11:07 AM - 11:22 AM
 
 #### Present
 * Shelby Grasso (Product Owner)
@@ -62,5 +61,46 @@ https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8d
 * **Tyler:** No real impediments - organizing and ensuring everyone feels productive
 
 Discussed considering meeting task complete, okayed by Shelby as Product Owner so it was moved to Done.  
-[Screenshot of product owner okay](images/screenshots/Sprint_2024-11-17/Issue%20complete%20Screenshot%202024-11-10%20112828.png)
+[Screenshot of product owner okay](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20112828%20SHY-14%20complete.png)
+
+
+## Group Programming Sessions
+
+### Session 2024-11-08
+**Goal:** Work on SHY-3 child issues SHY-15 (Provision AWS Amplify) and SHY-16 (Provision AWS Route53).
+
+#### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (joined partway through)
+
+#### Screenshots
+* [Working on Terraform code, initial configuration written by Hamza as starting point](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20191025%20AWS%20Terraform.png)
+* [Debugging error when running terraform apply](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20193335%20Terraform%20apply%20error.png)
+* [Successfully deployed to AWS Amplify](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20201424%20deployed%20to%20AWS%20Amplify.png)
+* [Working on adding custom shycat.fyi domain](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20203019%20custom%20shycat%20domain.png)
+
+### Session 2024-11-10
+**Goal:** Work on SHY-3 child issues SHY-17 (Minimal front end landing page), SHY-19 (Unit tests), SHY-20 (Check web access)
+
+#### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+We used pre-generated code from https://daisyui.com/components/navbar/ for the navbar component in our landing page, so we primarily spent the time in adding unit tests.
+
+#### Screenshots
+* [Adding the navbar component](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20114113%20adding%20navbar.png)
+* [Pasting in daisyui navbar](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20114218%20pasting%20in%20daisui%20navbar.png)
+* [Unit test failure](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20114907%20unit%20test%20failed.png)
+* [Adding unit tests](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20115608%20adding%20unit%20tests.png)
+* [Another unit test failure](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20120312%20another%20test%20failed.png)
+* [Adding more unit tests](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20120705%20more%20unit%20tests.png)
+* [A working SHYC&T website landing page](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123458%20working%20landing%20page.png)
+* [Marking SHY-3 complete](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123512%20completing%20SHY-3.png)
 
