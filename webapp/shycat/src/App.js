@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import EventList from './components/EventList';
+import { mockHarvardEvents } from'./data/EventData';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <h1>Welcome to SHYC&T</h1>
-      </header>
+      <EventList events={mockHarvardEvents} />
     </div>
   );
 }
