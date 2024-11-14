@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EventCard from './EventCard';
-import { mockHarvardEvents } from '../data/EventData';
+import { mockHarvardEvents } from '../data/Event';
 
 const mockHarvardEvent = mockHarvardEvents[0];
 

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { mockHarvardEvents } from './data/EventData';
+import { mockHarvardEvents } from './data/Event';
 
 test('renders navbar', () => {
   render(<App />);

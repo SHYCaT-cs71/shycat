@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EventList from './EventList';
-import { mockHarvardEvents } from '../data/EventData';
+import { mockHarvardEvents } from '../data/Event';
 
 test('renders EventList with the correct number of EventCards', () => {
     render(<EventList events={mockHarvardEvents} />);
