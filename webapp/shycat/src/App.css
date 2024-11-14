@@ -110,7 +110,7 @@ body {
 
 /* Ensure each card grows if tags overflow */
 .card-body {
-  min-height: 320px;
+  min-height: 270px;
 }
 
 /* General utility classes */
