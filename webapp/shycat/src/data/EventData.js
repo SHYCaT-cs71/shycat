@@ -32,7 +32,7 @@ export const mockHarvardEvents = [
         host: "Harvard Innovation Labs",
         originalLink: "https://example.com/harvard-startup-showcase",
         tags: ["Entrepreneurship", "Startups", "Networking"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Veritas Forum: Ethics in AI",
@@ -43,7 +43,7 @@ export const mockHarvardEvents = [
         host: "Veritas Forum",
         originalLink: "https://example.com/veritas-forum-ai",
         tags: ["Ethics", "AI", "Lecture"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Harvard-Yale Debate",
@@ -54,7 +54,7 @@ export const mockHarvardEvents = [
         host: "Harvard Debate Council",
         originalLink: "https://example.com/harvard-yale-debate",
         tags: ["Debate", "Yale", "Tradition"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Winter Concert by Harvard-Radcliffe Orchestra",
@@ -65,7 +65,7 @@ export const mockHarvardEvents = [
         host: "Harvard-Radcliffe Orchestra",
         originalLink: "https://example.com/winter-concert",
         tags: ["Music", "Classical", "Concert"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Harvard Environmental Conference",
@@ -76,7 +76,7 @@ export const mockHarvardEvents = [
         host: "Harvard Environmental Club",
         originalLink: "https://example.com/harvard-environmental-conference",
         tags: ["Environment", "Sustainability", "Research"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Art Exhibit: Harvard Graduate Student Showcase",
@@ -87,7 +87,7 @@ export const mockHarvardEvents = [
         host: "Harvard Art Museums",
         originalLink: "https://example.com/graduate-student-art",
         tags: ["Art", "Exhibit", "Harvard"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Career Fair: STEM Opportunities",
@@ -98,7 +98,7 @@ export const mockHarvardEvents = [
         host: "Harvard Career Services",
         originalLink: "https://example.com/stem-career-fair",
         tags: ["Career Fair", "STEM", "Networking"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Panel: Literature and Social Change",
@@ -109,7 +109,7 @@ export const mockHarvardEvents = [
         host: "Harvard Department of English",
         originalLink: "https://example.com/literature-social-change",
         tags: ["Literature", "Social Change", "Panel"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Harvard African Cultural Night",
@@ -120,7 +120,7 @@ export const mockHarvardEvents = [
         host: "Harvard African Students Association",
         originalLink: "https://example.com/african-cultural-night",
         tags: ["Culture", "Africa", "Community"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Public Health Lecture: Innovations in Vaccine Development",
@@ -131,7 +131,7 @@ export const mockHarvardEvents = [
         host: "Harvard Public Health Association",
         originalLink: "https://example.com/vaccine-development",
         tags: ["Public Health", "Vaccine", "Lecture"],
-        imageUrl: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     })
 ];
 
