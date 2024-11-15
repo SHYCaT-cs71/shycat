@@ -2,14 +2,14 @@
 
 CSCI E-71 Final project
 
-**Team Name**: SHYCaT  
+**Team Name**: SHYC&T  
 
 **Roster:**
 - Shelby Grasso (Product Owner)
 - Hanza Hashmi
 - Yu Lai
 - Christina Molodowitch
-- and
+- &
 - Tyler Malka (Scrum Master)
 
 Link to Slack channel:  
@@ -27,7 +27,7 @@ https://github.com/SHYCaT-cs71/shycat/blob/main/Shycat%20Project%20Vision.pdf
 Detailed User Persona:  
 https://www.figma.com/design/tJYam6D8osfEJDzZgDfX2o/SHYCaT_persona?node-id=0-1&node-type=canvas&t=zd44JGXoeKK9zDvC-0
 
-***Near Product Vision:*** Centralized events hub for Harvard/MIT
+***Near Product Vision:*** Centralized events hub for Harvard/MIT  
 ***Far Product Vision:*** Trusted event network for academic communities
 
 ### Stakeholders:
@@ -41,3 +41,6 @@ https://www.figma.com/design/tJYam6D8osfEJDzZgDfX2o/SHYCaT_persona?node-id=0-1&n
 * Value: Is it clear what value the item provides to the project and the end user?
 * Estimated: Does the item have an agreed-upon story point value?  Is the item sized appropriately to be completed within a single sprint?
 * Acceptance criteria: Are there a clearly-defined set of testable criteria that the developers can use to measure whether the item is implemented fully and correctly?
+
+## Sprints
+* [2024-11-17 Sprint 1](sprint1.md)
