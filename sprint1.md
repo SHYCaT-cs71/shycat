@@ -173,3 +173,37 @@ https://harvard.zoom.us/rec/share/BijIgv10xUF_eo1HzybUW1RcIM6XRBM0QE8a9FNeIaOSVS
     * Priority high for her as director, because this would be an essential and differentiating feature for her - it's something that EventBrite doesn't do.
 * Added new backlog item:  Location map
     * Stakeholder suggested that a map view of event locations would be helpful because there are potentially hundreds of possible locations.
+
+
+## Sprint Retrospective 2024-11-15
+Present:
+* Shelby Grasso (Product Owner)
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (Scrum Master)
+
+Used Plus-Delta Retrospective with Miro board
+
+Plus note groups:
+* Accurate forecasting (5)
+* Good backlog items (2)
+* Stakeholder meeting went well (3)
+* Working product (4)
+* Nice front end design (2)
+* Good teamwork (4)
+
+Delta note groups:
+* A little disorganized (1)
+* Inefficient mob programming (5)
+
+Focused on the mob programming delta - we all agreed it's not the most efficient way for us to build the product.  There are two competing priorities: practicing skills like mob programming (something we're less likely to use in other contexts) vs pushing forward with the product as quickly as possible.
+
+Added [PBI SHY-29](https://evilore.atlassian.net/browse/SHY-29) to seek clarification from instructor on the purpose of the project and update our practice accordingly.  PBI moved to top of product backlog.
+
+### Screenshots
+* [Initial unorganized Plus-Delta notes](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-15%20181150%E2%80%AFplus-delta%20initial.png)
+* [Grouped Plus-Delta notes](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-15%20182542%E2%80%AFplus-delta%20organized.png)
+* [Added new PBI from retrospective discussion](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-15%20182834%E2%80%AFnew%20pbi.png)
+* [Reordered product backlog to better reflect stakeholder priorities](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-15%20184542%E2%80%AFredordering%20backlog.png)
+* [Sprint complete!](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-15%20184824%E2%80%AFsprint%20complete.png)
