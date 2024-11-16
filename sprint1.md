@@ -3,6 +3,8 @@
 Product website:  
 [https://shycat.fyi/](https://shycat.fyi/)
 
+We used ChatGPT in this project to assist with project setup and debugging and to generate mock event data.  All code other than mock event data was either based on examples from the [DaisyUI Components](https://daisyui.com/components) or hand-written during the programming sessions.
+
 ## Sprint Planning 2024-11-04
 
 Present:
@@ -30,6 +32,8 @@ https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8d
 
 * [Image from daily scrum 2024-11-10 before marking meeting issue done.](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-10%20112922.png)
 * [Image after mob programming 2024-11-10, after both SHY-14 and SHY-3 marked done.](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-10%20123539.png)
+* [Image at start of mob programming 2024-11-13](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-13%20191412.png)
+* [Image after completing SHY-11](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-15%20140611.png)
 
 ## Daily Scrums
 
@@ -57,11 +61,18 @@ https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8d
 * **Tyler:** Facilitate progress, assisting where needed, work on pair/mob programming to build components/tests.
 
 #### Do you see any impediment that prevents the Developers from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan?
+**Impediments**
 * **Shelby:** Scheduling!
 * **Hamza:** No impediments
-* **Yu:** Ran into issues with bugs in unit tests - will work on debugging this, watch tutorials to learn more.  Also, how to do mob programming (technically?)  Used PyCharm in class, but can’t use this for our project.  Use VSCode?  (VSCode LiveShare)
-* **Christina:** No knowledge/experience with React, will continue to read up on it and practice.  Also needs to install VSCode.
-* **Tyler:** No real impediments - organizing and ensuring everyone feels productive
+* **Yu:** Yes - ran into issues with bugs when practicing unit test creation.  Also, how will team do mob programming technically?  Used PyCharm in class, but can’t use this for our project.
+* **Christina:** Yes - no knowledge/experience with React.
+* **Tyler:** No impediments
+
+**Impediment Removal Plan**
+* Team will try to have standard weekly day to meet - Wednesday.
+* Team will use VSCode LiveShare to do mob programming.  Christina will install VSCode and register.
+* Yu will work on debugging her trial run unit tests and watch tutorials to learn more.
+* Christina will read up on React and try to practice it.
 
 Discussed considering meeting task complete, okayed by Shelby as Product Owner so it was moved to Done.  
 [Screenshot of product owner okay](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20112828%20SHY-14%20complete.png)
@@ -106,4 +117,3 @@ We used pre-generated code from https://daisyui.com/components/navbar/ for the n
 * [Adding more unit tests](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20120705%20more%20unit%20tests.png)
 * [A working SHYC&T website landing page](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123458%20working%20landing%20page.png)
 * [Marking SHY-3 complete](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123512%20completing%20SHY-3.png)
-
