@@ -20,9 +20,9 @@ Only developers (listed above) participated in the Sprint Planning.
 **Rationale**: The requirement to use pair programming and mob programming raises concerns about shared availability, so we’re being conservative in our estimate.  We’re also using technologies that not everyone is familiar with, so we expect there to be a learning curve as less experienced members get up to speed.  The first backlog items have to be completed in order because they are blockers for each other, so we can’t work on them in parallel.
 
 Pulled in backlog items:
-1. SHY-14 (Optimized meetings)
-2. SHY-3 (Functioning website)
-3. SHY-11 (Main events listing view)
+1. [SHY-14 (Optimized meetings)](https://evilore.atlassian.net/browse/SHY-14)
+2. [SHY-3 (Functioning website)](https://evilore.atlassian.net/browse/SHY-3)
+3. [SHY-11 (Main events listing view)](https://evilore.atlassian.net/browse/SHY-11)
 
 [See Kanban Board in JIRA.](https://evilore.atlassian.net/jira/software/projects/SHY/boards/1)
 
@@ -96,6 +96,7 @@ Discussed considering meeting task complete, okayed by Shelby as Product Owner s
 * [Successfully deployed to AWS Amplify](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20201424%20deployed%20to%20AWS%20Amplify.png)
 * [Working on adding custom shycat.fyi domain](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20203019%20custom%20shycat%20domain.png)
 
+
 ### Session 2024-11-10
 **Goal:** Work on SHY-3 child issues SHY-17 (Minimal front end landing page), SHY-19 (Unit tests), SHY-20 (Check web access)
 
@@ -106,7 +107,7 @@ Discussed considering meeting task complete, okayed by Shelby as Product Owner s
 * Christina Molodowitch
 * Tyler Malka
 
-We used pre-generated code from https://daisyui.com/components/navbar/ for the navbar component in our landing page, so we primarily spent the time in adding unit tests.
+We used sample code from [DaisyUI Navbar](https://daisyui.com/components/navbar/) for the navbar component in our landing page, so we primarily spent the time in adding unit tests.
 
 #### Screenshots
 * [Adding the navbar component](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20114113%20adding%20navbar.png)
