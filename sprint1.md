@@ -119,6 +119,25 @@ We used sample code from [DaisyUI Navbar](https://daisyui.com/components/navbar/
 * [A working SHYC&T website landing page](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123458%20working%20landing%20page.png)
 * [Marking SHY-3 complete](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-10%20123512%20completing%20SHY-3.png)
 
+### Session 2024-11-13
+**Goal:** Work on SHY-11 (Main events listing view)
+
+#### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+We used sample code from [DaisyUI Card](https://daisyui.com/components/card/) as the basis for the single event card.  We used ChatGPT to generate mock event data for testing and the demo.
+
+#### Screenshots
+* [Adding EventCard class based on DaisyUI Card](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-13%20194305%20event%20card.png)
+* [Adding unit tests](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-13%20201033%20unit%20tests.png)
+* [Unit test failing](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-13%20202414%20test%20fails.png)
+* [Tests pass](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-13%20202603%20tests%20pass.png)
+* [Display with single event card](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-13%20204607%20single%20event%20card.png)
+
 
 ## Sprint Review 2024-11-15
 Present:
