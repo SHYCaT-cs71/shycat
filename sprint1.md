@@ -36,6 +36,7 @@ https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8d
 * [Image after mob programming 2024-11-10, after both SHY-14 and SHY-3 marked done.](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-10%20123539.png)
 * [Image at start of mob programming 2024-11-13](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-13%20191412.png)
 * [Image after completing SHY-11](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-15%20140611.png)
+* [Image after sprint ended](images/screenshots/Sprint_2024-11-17/Burndown%20screenshot%202024-11-18%20145430.png)
 
 ## Daily Scrums
 
