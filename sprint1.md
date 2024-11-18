@@ -24,7 +24,9 @@ Pulled in backlog items:
 2. [SHY-3 (Functioning website)](https://evilore.atlassian.net/browse/SHY-3)
 3. [SHY-11 (Main events listing view)](https://evilore.atlassian.net/browse/SHY-11)
 
-[See Kanban Board in JIRA.](https://evilore.atlassian.net/jira/software/projects/SHY/boards/1)
+[See Kanban Board in JIRA.](https://evilore.atlassian.net/jira/software/projects/SHY/boards/1) (currently empty since we closed our sprint following the Sprint Retrospective)  
+[Screenshot of Kanban board while in progress](images/screenshots/Sprint_2024-11-17/Screenshot%202024-11-08%20201239%20kanban.png)
+
 
 ## Burndown Chart
 Created a simple burndown chart in Google Sheets since the JIRA chart didn't meet assignment requirements:   
