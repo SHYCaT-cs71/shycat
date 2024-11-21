@@ -4,7 +4,10 @@
 *bootstrap*
 **/__pycache__*
 **zip*
-**/test*
+!**/src/test/java
+!**/src/test/resources
+# Remove the general "test" folder ignore since we want to commit the Java tests
+#**/test*
 .DS_Store
 **/.env
 .idea
