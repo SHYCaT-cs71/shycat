@@ -47,3 +47,4 @@ https://www.figma.com/design/tJYam6D8osfEJDzZgDfX2o/SHYCaT_persona?node-id=0-1&n
 
 ## Sprints
 * [2024-11-17 Sprint 1](sprint1.md)
+* [2024-12-02 Sprint 2](sprint2.md)
