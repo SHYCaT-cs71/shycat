@@ -22,6 +22,15 @@ Pulled in backlog items:
 3. [SHY-44 (User-created events - front end)](https://evilore.atlassian.net/browse/SHY-44)
 4. [SHY-13 (Detailed event view)](https://evilore.atlassian.net/browse/SHY-13)
 
+### Screenshots
+* [Initial PBI pulled into sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20172853.png)
+* [Updating story point estimates](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20174249.png)
+* [Decomposing large PBI into two smaller items](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20174411.png)
+* [Finished splitting items and updating story points](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175728.png)
+* [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
+* [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175912.png)
+
+Note that we forgot to update the Sprint name before starting the sprint!  This is [fixed later](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png).
 
 ## Burndown Chart
 Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
