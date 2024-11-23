@@ -27,10 +27,13 @@ Pulled in backlog items:
 * [Updating story point estimates](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20174249.png)
 * [Decomposing large PBI into two smaller items](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20174411.png)
 * [Finished splitting items and updating story points](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175728.png)
+
+Note that we forgot to update the Sprint name before starting the sprint!  This is fixed later - see Kanban Board screenshots below.
+
+## Kanban Board Screenshots
 * [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
 * [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175912.png)
-
-Note that we forgot to update the Sprint name before starting the sprint!  This is [fixed later](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png).
+* [Sprint name updated with correct end date](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png)
 
 ## Burndown Chart
 Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
