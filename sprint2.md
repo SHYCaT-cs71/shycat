@@ -3,6 +3,8 @@
 Product website:  
 [https://shycat.fyi/](https://shycat.fyi/)
 
+For this project, we used Spring Initializr to generate the structure for the Java Spring-based back end.  We used ChatGPT to generate the sample SQL script used for repository testing and integration REST controller testing.
+
 ## Sprint Planning 2024-11-18
 
 #### Present
@@ -42,6 +44,47 @@ Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
 * [Initial chart at start of sprint](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191045.png)
 * [Updated to fill through 2024-11-20](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191144.png)
 
+
+## Daily Scrum
+
+### Scrum 2024-11-24
+
+#### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+#### Screenshots
+* [Group meeting](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20113545.png)
+* [Framework](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20113610.png)
+* [Answering questions](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20114738.png)
+
+#### What did you do in the last 24 hours that helped you meet the Sprint Goal?
+* **Shelby:** Looked into web scraping to become more familiar with it, especially in Java.  Also worked with practice React app.  Confirmed with Alexa (stakeholder) that she's available to meet for Sprint Review on Monday morning 12/2/2024.
+* **Hamza:** Investigated Java and Spring in particular.  Also went over how to set up an AWS EC2 instance for use with the back end.
+* **Yu:** Worked on refining user stories in Product Backlog Items, based on feedback from professor.
+* **Christina:** Prepped for next mob programming session.  Reviewed Spring Boot testing/annotations and investigated Harvard events calendar website data structure.  Downloaded sample web pages and created some test data that could be used in unit tests.
+* **Tyler:** Focused on realigning team to meet the new requirement from professor, brainstormed options on how best to incorporate going forward.
+
+#### What will you do in the next 24 hours to meet the Sprint Goal?
+* **Shelby:** Participate in mob programming when available, continue to investigate Java/React libraries.
+* **Hamza:** Help write back end, prepare for AWS EC2 instance creation to run the back end.
+* **Yu:** Participate in mob programming, continue refining user stories based on team discussion/new requirements.
+* **Christina:** Participate in mob programming, break down sample data further to make it usable in narrowly-focused unit tests.
+* **Tyler:** Participate in mob programming, help to update current and future sprint goals and issues.
+
+#### Do you see any impediment that prevents the Developers from meeting the Sprint Goal? What are the impediments?
+* **Shelby:** None, other than availability (travel)
+* **Hamza:** Availability, on call this week so may have to suddenly drop out of sessions.
+* **Yu:** Had trouble in refining user stories, particularly the pair around creating new events that were separate into front end vs back end - 
+* **Christina:** Scheduling/availability (holidays and other responsibilities)
+* **Tyler:** Scheduling, other responsibilities
+
+#### What is your impediment removal plan?
+To cope with the scheduling/availability problems, we plan to adopt agile flexibility in scheduling meetings and setting up programming sessions, switching to pair programming at times to reduce the number of people whose schedules need to align.  
+To address the issue with the current backlog items and sprint plan not meeting the instructor requirements based on feedback, today we will refocus the sprint and update backlog items.
 
 ## Group Programming Sessions
 
