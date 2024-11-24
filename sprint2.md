@@ -8,11 +8,13 @@ For this project, we used Spring Initializr to generate the structure for the Ja
 ## Sprint Planning 2024-11-18
 
 #### Present
-* Shelby Grasso (Product Owner)
+* Shelby Grasso (Product Owner and Developer)
 * Hamza Hashmi
 * Yu Lai
 * Christina Molodowitch
-* Tyler Malka (Scrum Master)
+* Tyler Malka (Scrum Master and Developer)
+
+Only Developers participated in this activity.
 
 **_Goal:_** Set up a minimal back end to communicate with front end and display the info.  
 **_Forecast_**: 9 story points  
@@ -31,6 +33,33 @@ Pulled in backlog items:
 * [Finished splitting items and updating story points](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175728.png)
 
 Note that we forgot to update the Sprint name before starting the sprint!  This is fixed later - see Kanban Board screenshots below.
+
+
+## Sprint Planning Redux 2024-11-24
+
+#### Present
+* Shelby Grasso (Product Owner and Developer)
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (Scrum Master and Developer)
+
+Only Developers participated in this activity.
+
+Following feedback from instructor to "recast your project to be more in line with a computer science course" and "to see algorithms and data structures that you can build test-first", we met again to refocus/update our PBIs and plan for the sprint.  We wanted to prioritize algorithms and more readily testable code instead of our previous plan, which focused on building additional front end components (event submission form and detailed event view).
+
+We removed SHY-2, SHY-13, and SHY-44, and replaced them with:
+* [SHY-4 (Automatically find new events from Harvard events calendar)](https://evilore.atlassian.net/browse/SHY-4)
+* [SHY-62 (Consistent information for each event)](https://evilore.atlassian.net/browse/SHY-62)
+
+Note that SHY-4 was originally several items down in the Product Backlog, so wasn't initially ready to be pulled into a sprint - in part because it was too large and non-specific.  We decomposed it into SHY-4 and SHY-62, and added acceptance criteria and programmer tasks.
+
+### Screenshots
+* [Moving front end stories out of sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20115437.png)
+* [Filling in new SHY-62 item](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121623.png)
+* [Kanban board with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121739.png)
+* [Updated backlog, sprint now at 11 story points](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20123556.png)
+
 
 ## Kanban Board Screenshots
 * [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
