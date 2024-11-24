@@ -65,6 +65,9 @@ Note that SHY-4 was originally several items down in the Product Backlog, so was
 * [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
 * [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175912.png)
 * [Sprint name updated with correct end date](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png)
+* [Board following restructure of sprint, with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121739.png)
+* [Board without child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20143840.png)
+
 
 ## Burndown Chart
 Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
@@ -72,6 +75,7 @@ Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
 ### Screenshots
 * [Initial chart at start of sprint](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191045.png)
 * [Updated to fill through 2024-11-20](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191144.png)
+* [Reworked for changes to sprint total (now 11 story points)](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-24%20123922.png)
 
 
 ## Daily Scrum
