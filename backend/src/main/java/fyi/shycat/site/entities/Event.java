@@ -2,7 +2,6 @@ package fyi.shycat.site.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -12,6 +11,7 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "title", nullable = false)
     private String title;
 
     @Column(name = "summary", length = 500)
@@ -20,9 +20,26 @@ public class Event {
     @Column(name = "description", length = 4000)
     private String description;
 
-    private LocalDateTime date;
+    @AttributeOverrides({
+            @AttributeOverride(name = "date", column = @Column(name = "start_date", nullable = false)),
+            @AttributeOverride(name = "time", column = @Column(name = "start_time"))
+    })
+    DateTime startDateTime;
 
-    private String location;
+    @AttributeOverrides({
+            @AttributeOverride(name = "date", column = @Column(name = "end_date")),
+            @AttributeOverride(name = "time", column = @Column(name = "end_time"))
+    })
+    DateTime endDateTime;
+
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "name", column = @Column(name = "location_name")),
+            @AttributeOverride(name = "address", column = @Column(name = "address", length = 500)),
+            @AttributeOverride(name = "geo.latitude", column = @Column(name = "latitude")),
+            @AttributeOverride(name = "geo.longitude", column = @Column(name = "longitude"))
+    })
+    private Location location;
 
     private String host;
 
@@ -65,19 +82,27 @@ public class Event {
         this.description = description;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public DateTime getStartDateTime() {
+        return startDateTime;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setStartDateTime(DateTime startDateTime) {
+        this.startDateTime = startDateTime;
     }
 
-    public String getLocation() {
+    public DateTime getEndDateTime() {
+        return endDateTime;
+    }
+
+    public void setEndDateTime(DateTime endDateTime) {
+        this.endDateTime = endDateTime;
+    }
+
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
