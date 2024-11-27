@@ -3,7 +3,7 @@ package fyi.shycat.site.entities;
 import jakarta.persistence.Embeddable;
 
 import java.time.LocalDate;
-import java.time.OffsetTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
@@ -12,12 +12,12 @@ public class DateTime {
 
     private LocalDate date;
 
-    private OffsetTime time;
+    private LocalTime time;
 
     public DateTime() {
     }
 
-    public DateTime(LocalDate date, OffsetTime time) {
+    public DateTime(LocalDate date, LocalTime time) {
         this.date = date;
         this.time = time;
     }
@@ -30,11 +30,11 @@ public class DateTime {
         this.date = date;
     }
 
-    public OffsetTime getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(OffsetTime time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 
