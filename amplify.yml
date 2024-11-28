@@ -5,7 +5,7 @@ applications:
         preBuild:
           commands:
             - yarn install --frozen-lockfile
-            - yarn test
+            - CI=true yarn test
         build:
           commands:
             - echo "FAST_REFRESH=false" >> .env
