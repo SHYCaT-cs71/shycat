@@ -13,31 +13,31 @@ test('logo exists', () => {
 
 });
 
-test('search bar', ()=>{
-    render(<Navbar />);
+// test('search bar', ()=>{
+//     render(<Navbar />);
 
-    const searchBar = screen.getByPlaceholderText("Search");
-    expect(searchBar).toBeInTheDocument();
+//     const searchBar = screen.getByPlaceholderText("Search");
+//     expect(searchBar).toBeInTheDocument();
 
-    const searchBarById = screen.getByTestId("search");
-    expect(searchBarById).toBeInTheDocument();
+//     const searchBarById = screen.getByTestId("search");
+//     expect(searchBarById).toBeInTheDocument();
 
-});
+// });
 
-test('user profile button exists', ()=>{
-  render(<Navbar />);
+// test('user profile button exists', ()=>{
+//   render(<Navbar />);
 
-  const profileButton = screen.getAllByRole('button');
-  expect(profileButton.length).toBe(1);
-  expect(profileButton[0]).toBeInTheDocument();
+//   const profileButton = screen.getAllByRole('button');
+//   expect(profileButton.length).toBe(1);
+//   expect(profileButton[0]).toBeInTheDocument();
 
-});
+// });
 
-test('user profile dropdown exists', ()=>{
-    render(<Navbar />);
+// test('user profile dropdown exists', ()=>{
+//     render(<Navbar />);
   
-    const dropdownMenu = screen.getByTestId("profile-dropdown");
-    expect(dropdownMenu).toBeInTheDocument();
-    expect(dropdownMenu.childElementCount).toBe(3);
+//     const dropdownMenu = screen.getByTestId("profile-dropdown");
+//     expect(dropdownMenu).toBeInTheDocument();
+//     expect(dropdownMenu.childElementCount).toBe(3);
 
-});
+// });

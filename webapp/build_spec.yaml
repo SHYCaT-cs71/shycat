@@ -5,6 +5,7 @@ applications:
         preBuild:
           commands:
             - yarn install
+            - yarn test
         build:
           commands:
             - echo "FAST_REFRESH=false" >> .env

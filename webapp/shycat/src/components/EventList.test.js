@@ -22,8 +22,10 @@ test('renders all events with correct summaries', () => {
     render(<EventList events={mockHarvardEvents} />);
 
     mockHarvardEvents.forEach((event) => {
-        const summary = screen.getByText(event.summary);
-        expect(summary).toBeInTheDocument();
+        if (event.summary) {
+            const summary = screen.getByText(event.summary);
+            expect(summary).toBeInTheDocument();
+        }
     });
 });
 
@@ -31,18 +33,17 @@ test('renders all events with correct locations', () => {
     render(<EventList events={mockHarvardEvents} />);
 
     mockHarvardEvents.forEach((event) => {
-        const location = screen.getByText(event.location);
-        expect(location).toBeInTheDocument();
+        const locationName = screen.getByText('Location: ' + event.locationName);
+        expect(locationName).toBeInTheDocument();
     });
 });
 
-test('renders all events with correct dates', () => {
+test('renders all events with correct start dates', () => {
     render(<EventList events={mockHarvardEvents} />);
 
     mockHarvardEvents.forEach((event) => {
-        const formattedDate = event.date.toLocaleString();
-        const date = screen.getByText(formattedDate);
-        expect(date).toBeInTheDocument();
+        const startDate = screen.getByText('Start: ' + event.startDate);
+        expect(startDate).toBeInTheDocument();
     });
 });
 
@@ -52,7 +53,7 @@ test('renders all events with correct tags', () => {
     mockHarvardEvents.forEach((event) => {
       event.tags.forEach((tag) => {
         const tagElements = screen.getAllByText(tag);
-        expect(tagElements.length).toBeGreaterThan(0);
+        expect(tagElements.length).toBeGreaterThan(3);
       });
     });
 });

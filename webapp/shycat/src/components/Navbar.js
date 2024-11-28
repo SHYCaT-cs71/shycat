@@ -8,8 +8,9 @@ const Navbar = () => {
           SHYC&T
         </a>
       </div>
-      
-      <div className="flex-1 flex justify-center">
+
+      {/* TODO: Implement search bar */}
+      {/* <div className="flex-1 flex justify-center">
         <div className="form-control w-full max-w-md">
           <input
             type="text"
@@ -18,9 +19,10 @@ const Navbar = () => {
             className="input input-bordered w-full border-gray-300 bg-gray-100 text-gray-700 placeholder-gray-500 focus:bg-gray-200 focus:border-blue-600"
           />
         </div>
-      </div>
-      
-      <div className="flex-1 flex items-center justify-end gap-4">
+      </div> */}
+
+      {/* TODO: Implement user page */}
+      {/* <div className="flex-1 flex items-center justify-end gap-4">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
@@ -49,7 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

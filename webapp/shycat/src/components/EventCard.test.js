@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import EventCard from './EventCard';
+import EventCard, { getEventSummary } from './EventCard';
 import { mockHarvardEvents } from '../data/Event';
 
 const mockHarvardEvent = mockHarvardEvents[0];
@@ -38,15 +38,24 @@ test('tags exist', () => {
 test('location exists', () => {
   render(<EventCard event={mockHarvardEvent} />);
   
-  const location = screen.getByText(mockHarvardEvent.location);
+  const location = screen.getByText('Location: ' + mockHarvardEvent.locationName);
   expect(location).toBeInTheDocument();
 });
 
 test('date exists', () => {
   render(<EventCard event={mockHarvardEvent} />);
-  
-  // The date is formatted with toLocaleString(), so we check the string representation.
-  const formattedDate = mockHarvardEvent.date.toLocaleString();
-  const date = screen.getByText(formattedDate);
+
+  const date = screen.getByText('Start: ' + mockHarvardEvent.startDate);
   expect(date).toBeInTheDocument();
+});
+
+test('get truncated description', () => {
+
+  const description = "This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds. Innovators pitch their projects to potential investors, gaining invaluable feedback and visibility. From tech startups to social enterprises, attendees will see a diverse array of ventures aimed at addressing real-world issues. It’s also a great networking opportunity for anyone interested in entrepreneurship and innovation.";
+
+  const summary = getEventSummary(description);
+
+  expect(summary).toBe(
+    "This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds."
+  )
 });
