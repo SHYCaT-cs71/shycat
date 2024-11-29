@@ -30,7 +30,7 @@ jobs:
         cp backend/target/*.jar deploy/app.jar
 
     - name: Upload Application to EC2
-      uses: appleboy/scp-action@v0.2.5
+      uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.SHYCAT_EC2_HOST }}
         username: ec2-user
