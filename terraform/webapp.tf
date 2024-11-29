@@ -7,7 +7,7 @@ resource "aws_amplify_app" "shycat_webapp" {
   access_token = var.github_access_token
 
   environment_variables = {
-    API_ENDPOINT = "http://${aws_instance.shycat_instance.public_dns}:8080"
+    API_ENDPOINT              = "http://${aws_instance.shycat_instance.public_dns}:8080"
     AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }
@@ -22,7 +22,7 @@ resource "aws_amplify_branch" "shycat_webapp_main" {
   enable_auto_build = true
 
   environment_variables = {
-    API_ENDPOINT = "http://${aws_instance.shycat_instance.public_dns}:8080"
+    API_ENDPOINT              = "http://${aws_instance.shycat_instance.public_dns}:8080"
     AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }

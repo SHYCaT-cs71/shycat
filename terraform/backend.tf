@@ -1,6 +1,5 @@
-
-# Latest AL2 AMI
-data "aws_ami" "amazon-linux-2" {
+# Fetch the latest AL2 AMI
+data "aws_ami" "amazon_linux_2" {
   most_recent = true
 
   filter {
@@ -20,7 +19,7 @@ resource "aws_key_pair" "shycat_key" {
   public_key = file("~/.ssh/shycat-key.pub")
 }
 
-# Create a security group allowing HTTP and custom communication
+# Security group allowing SSH and application access
 resource "aws_security_group" "shycat_sg" {
   name_prefix = "shycat-sg"
 
@@ -46,28 +45,50 @@ resource "aws_security_group" "shycat_sg" {
   }
 }
 
-# Create an EC2 instance
+# Create EC2 instance for Shycat backend
 resource "aws_instance" "shycat_instance" {
-  ami           = data.aws_ami.amazon-linux-2.id
+  ami           = data.aws_ami.amazon_linux_2.id
   instance_type = "t2.micro"
 
-  key_name      = aws_key_pair.shycat_key.key_name
+  key_name        = aws_key_pair.shycat_key.key_name
   security_groups = [aws_security_group.shycat_sg.name]
 
   user_data = <<-EOF
     #!/bin/bash
-    set -e
-
+    # Update system and install Java 21
     sudo yum update -y
-    sudo rpm --import https://yum.corretto.aws/corretto.key
-    sudo curl -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+    sudo amazon-linux-extras enable corretto21
+    sudo yum install -y java-21-amazon-corretto
 
-    # Install Java 21
-    sudo yum install -y java-21-amazon-corretto-devel
-    java -version
+    # Create a directory for the Shycat Spring Boot application
+    sudo mkdir -p /opt/shycat
+    sudo chown ec2-user:ec2-user /opt/shycat
+
+    # Create a systemd service file for the Shycat application
+    sudo tee /etc/systemd/system/shycat.service > /dev/null <<EOL
+    [Unit]
+    Description=Shycat Spring Boot Application
+    After=network.target
+
+    [Service]
+    User=ec2-user
+    ExecStart=/usr/bin/java -jar /opt/shycat/app.jar
+    Restart=always
+    StandardOutput=journal
+    StandardError=journal
+
+    [Install]
+    WantedBy=multi-user.target
+    EOL
+
+    # Reload systemd and enable the Shycat service
+    sudo systemctl daemon-reload
+    sudo systemctl enable shycat
+
+    echo "Shycat setup complete. Deploy your app.jar to /opt/shycat/"
   EOF
 
   tags = {
-    Name = "shycat-backend"
+    Name = "ShycatBackend"
   }
 }

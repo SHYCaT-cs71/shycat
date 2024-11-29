@@ -20,5 +20,5 @@ data "aws_caller_identity" "aws" {}
 
 # Local Values
 locals {
-  account_id      = data.aws_caller_identity.aws.account_id
+  account_id = data.aws_caller_identity.aws.account_id
 }
