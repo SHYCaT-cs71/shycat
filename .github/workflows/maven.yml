@@ -73,7 +73,7 @@ jobs:
         script: |
           cd /opt/shycat/
           ./mvnw clean package
-          mv target/*.jar /opt/shycat/shycat.jar
+          mv -f target/*.jar /opt/shycat/shycat.jar
           sudo chown ec2-user:ec2-user /opt/shycat/shycat.jar
           sudo systemctl restart shycat.service
 
@@ -85,7 +85,7 @@ jobs:
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
         script: |
           # Wait for the application to be up and running
-          sleep 30
+          sleep 15
 
           # Check the health endpoint
           response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/health)
