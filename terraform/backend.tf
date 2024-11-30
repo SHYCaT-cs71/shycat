@@ -60,19 +60,19 @@ resource "aws_instance" "shycat_instance" {
     sudo amazon-linux-extras enable corretto21
     sudo yum install -y java-21-amazon-corretto
 
-    # Create a directory for the Shycat Spring Boot application
+    # Create a directory for the Shycat Backend Application
     sudo mkdir -p /opt/shycat
     sudo chown ec2-user:ec2-user /opt/shycat
 
     # Create a systemd service file for the Shycat application
     sudo tee /etc/systemd/system/shycat.service > /dev/null <<EOL
     [Unit]
-    Description=Shycat Spring Boot Application
+    Description=Shycat Backend Application
     After=network.target
 
     [Service]
     User=ec2-user
-    ExecStart=/usr/bin/java -jar /opt/shycat/app.jar
+    ExecStart=/usr/bin/java -jar /opt/shycat/shycat.jar
     Restart=always
     StandardOutput=journal
     StandardError=journal
@@ -85,7 +85,7 @@ resource "aws_instance" "shycat_instance" {
     sudo systemctl daemon-reload
     sudo systemctl enable shycat
 
-    echo "Shycat setup complete. Deploy your app.jar to /opt/shycat/"
+    echo "Shycat setup complete. Deploy your shycat.jar to /opt/shycat/"
   EOF
 
   tags = {

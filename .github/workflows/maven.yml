@@ -54,6 +54,15 @@ jobs:
         target: /opt/shycat/
         strip_components: 1
 
+    - name: Upload Application to EC2
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SHYCAT_EC2_HOST }}
+        username: ec2-user
+        key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
+        source: backend/
+        target: /opt/shycat/
+
     - name: Restart Application on EC2
       uses: appleboy/ssh-action@v0.1.7
       with:
@@ -61,7 +70,27 @@ jobs:
         username: ec2-user
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
         script: |
-          cd /opt/shycat/backend
-          ./mvnw clean install
+          cd /opt/shycat/
           ./mvnw clean package
+          mv target/*.jar /opt/shycat/shycat.jar
+          sudo chown ec2-user:ec2-user /opt/shycat/shycat.jar
           sudo systemctl restart shycat.service
+
+    - name: Wait for Application to Start and Ping /health
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.SHYCAT_EC2_HOST }}
+        username: ec2-user
+        key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
+        script: |
+          # Wait for the application to be up and running
+          sleep 30
+
+          # Check the health endpoint
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/health)
+          if [ "$response" -ne 200 ]; then
+            echo "Application health check failed with status code $response"
+            exit 1
+          else
+            echo "Application is up and running"
+          fi
