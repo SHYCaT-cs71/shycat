@@ -1,4 +1,8 @@
--- Pre-load fake event data for testing
+-- For now, just use the same data.sql for tests and to pre-seed the database
+
+-- reset identity seed for id column to ensure that the child tags are always linked correctly
+ALTER TABLE event ALTER COLUMN id RESTART WITH 1;
+
 INSERT INTO event (title,
                    summary,
                    description,
@@ -14,11 +18,11 @@ INSERT INTO event (title,
                    original_Link,
                    image_Url)
 VALUES ('Test title',
-        NULL,
+        'An exciting showcase where Harvard entrepreneurs and innovators present their startup ideas.',
         'This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard''s brightest minds. Innovators pitch their projects to potential investors, gaining invaluable feedback and visibility. From tech startups to social enterprises, attendees will see a diverse array of ventures aimed at addressing real-world issues. It’s also a great networking opportunity for anyone interested in entrepreneurship and innovation.',
         '2024-11-30',
         '18:00:00',
-            '2024-11-30',
+        '2024-11-30',
         '20:30:00',
         'Harvard i-lab, Batten Hall',
         '125 Western Ave, Allston',
@@ -28,7 +32,7 @@ VALUES ('Test title',
         'https://example.com/harvard-startup-showcase',
         'https://picsum.photos/800/600?random=0.1'),
        ('Veritas Forum: Ethics in AI',
-        'A forum on the ethical implications of artificial intelligence featuring Harvard faculty and experts.',
+        NULL,
         'This forum will explore the ethical dimensions of AI development, addressing questions about technology''s impact on society, privacy, and the role of ethics in AI. Attendees will gain insights from experts who discuss the responsibilities of developers and the moral complexities that come with advancing artificial intelligence. A thought-provoking event for anyone interested in technology''s future and its ethical considerations.',
         '2024-12-05',
         '19:00:00',
@@ -42,7 +46,7 @@ VALUES ('Test title',
         'https://example.com/veritas-forum-ai',
         'https://picsum.photos/800/600?random=0.2'),
        ('Harvard-Yale Debate',
-        NULL,
+        'The annual debate between Harvard and Yale on a current societal issue.',
         'Continuing a historic rivalry, Harvard and Yale debaters face off to argue key issues impacting society today. This event combines tradition with a vibrant intellectual exchange, attracting students, faculty, and alumni from both universities. It’s a chance to witness passionate debate, learn about important issues, and support Harvard''s team in a friendly, competitive atmosphere.',
         '2024-12-10',
         '18:30:00',
@@ -75,7 +79,7 @@ https://example.com/winter-concert',
         '
 https://picsum.photos/800/600?random=0.4'),
        ('Harvard Environmental Conference',
-        'A conference on sustainable practices, climate change, and environmental policy.',
+        NULL,
         'Join experts, students, and community leaders to discuss the latest research and solutions for environmental sustainability. Sessions will cover diverse topics, including climate action, renewable energy, and policy advocacy. The conference provides a platform for impactful discussions,
 with workshops designed to inspire actionable solutions to pressing environmental issues.',
         '2024-12-20',
@@ -103,7 +107,3 @@ VALUES (1, 'Entrepreneurship'),
        (4, 'Music'),
        (4, 'Classical'),
        (4, 'Concert');
-
-
-
-
