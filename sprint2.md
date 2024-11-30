@@ -177,3 +177,4 @@ We first set up CI for the back end using a Github action with a Maven-based wor
 * [Front end connected (back end not yet pre-initialized with events)](images/screenshots/Sprint_2024-12-02/frontend-backend%20communication.png)
 * [Failed test blocks workflow](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113111.png)
 * [Failing test removed, workflow completes and deploys to back end, including health check](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113826.png)
+* [Front end pulling events from back end](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20122208.png)
