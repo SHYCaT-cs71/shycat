@@ -123,4 +123,9 @@ public class EventRepositoryTest {
         eventList.sort(Comparator.comparing(Event::getId));
         checkEvent(eventList.getFirst());
     }
+
+    @Test
+    void testFail() {
+        assertThat(false, is(true));
+    }
 }
