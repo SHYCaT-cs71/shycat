@@ -37,6 +37,7 @@ jobs:
       run: mvn -B package --file backend/pom.xml
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -46,8 +47,9 @@ jobs:
         host: ${{ secrets.SHYCAT_EC2_HOST }}
         username: ec2-user
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
-        source: backend/*
+        source: backend/
         target: /opt/shycat/
+        strip_components: 1
 
     - name: Restart Application on EC2
       uses: appleboy/ssh-action@v0.1.7
