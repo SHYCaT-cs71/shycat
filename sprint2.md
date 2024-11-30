@@ -70,7 +70,8 @@ Note that SHY-4 was originally several items down in the Product Backlog, so was
 
 
 ## Burndown Chart
-Reworked graph to have smooth line from 10 story points (size of sprint) to 0.  [Link to chart.](https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8dfU4/edit?gid=349255037#gid=349255037)
+Reworked graph to have smooth line from 10 story points (size of sprint) to 0.  
+[Link to chart.](https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8dfU4/edit?gid=349255037#gid=349255037)
 
 ### Screenshots
 * [Initial chart at start of sprint](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191045.png)
