@@ -42,10 +42,17 @@ test('location exists', () => {
   expect(location).toBeInTheDocument();
 });
 
-test('date exists', () => {
+test('start date exists', () => {
   render(<EventCard event={mockHarvardEvent} />);
 
   const date = screen.getByText('Start: ' + mockHarvardEvent.startDate);
+  expect(date).toBeInTheDocument();
+});
+
+test('end date exists', () => {
+  render(<EventCard event={mockHarvardEvent} />);
+
+  const date = screen.getByText('End: ' + mockHarvardEvent.endDate);
   expect(date).toBeInTheDocument();
 });
 

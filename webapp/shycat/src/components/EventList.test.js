@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import EventList from './EventList';
+import { getEventSummary } from "./EventCard";
 import { mockHarvardEvents } from '../data/Event';
 
 test('renders EventList with the correct number of EventCards', () => {
@@ -22,10 +23,14 @@ test('renders all events with correct summaries', () => {
     render(<EventList events={mockHarvardEvents} />);
 
     mockHarvardEvents.forEach((event) => {
+        let summary;
         if (event.summary) {
-            const summary = screen.getByText(event.summary);
-            expect(summary).toBeInTheDocument();
+            summary = screen.getByText(event.summary);
         }
+        else {
+            summary = screen.getByText(getEventSummary(event.description));
+        }
+        expect(summary).toBeInTheDocument();
     });
 });
 
@@ -44,6 +49,17 @@ test('renders all events with correct start dates', () => {
     mockHarvardEvents.forEach((event) => {
         const startDate = screen.getByText('Start: ' + event.startDate);
         expect(startDate).toBeInTheDocument();
+    });
+});
+
+test('renders all events with correct end dates', () => {
+    render(<EventList events={mockHarvardEvents} />);
+
+    mockHarvardEvents.forEach((event) => {
+        if (event.endDate) {
+            const startDate = screen.getByText('End: ' + event.endDate);
+            expect(startDate).toBeInTheDocument();
+        }
     });
 });
 
