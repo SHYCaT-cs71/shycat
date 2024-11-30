@@ -72,6 +72,7 @@ jobs:
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
         script: |
           cd /opt/shycat/
+          sudo chown -R ec2-user:ec2-user /opt/shycat/
           ./mvnw clean package
           mv -f target/*.jar /opt/shycat/shycat.jar
           sudo chown ec2-user:ec2-user /opt/shycat/shycat.jar
