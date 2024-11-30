@@ -7,7 +7,7 @@ resource "aws_amplify_app" "shycat_webapp" {
   access_token = var.github_access_token
 
   environment_variables = {
-    API_ENDPOINT              = "http://${aws_instance.shycat_instance.public_dns}:8080"
+    API_ENDPOINT              = "https://${aws_instance.shycat_instance.public_dns}"
     AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }
@@ -22,7 +22,7 @@ resource "aws_amplify_branch" "shycat_webapp_main" {
   enable_auto_build = true
 
   environment_variables = {
-    API_ENDPOINT              = "http://${aws_instance.shycat_instance.public_dns}:8080"
+    API_ENDPOINT              = "https://${aws_instance.shycat_instance.public_dns}"
     AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
   }
 }
@@ -35,7 +35,7 @@ resource "aws_amplify_branch" "shycat_webapp_main" {
 #   stage     = "DEVELOPMENT"
 
 #   environment_variables = {
-#     API_ENDPOINT = "http://${aws_instance.shycat_instance.public_dns}:8080"
+#     API_ENDPOINT = "https://${aws_instance.shycat_instance.public_dns}"
 #     AMPLIFY_MONOREPO_APP_ROOT = "webapp/shycat"
 #   }
 # }
@@ -65,7 +65,7 @@ resource "null_resource" "generate_env_file" {
     command = <<EOT
       rm -rf ../webapp/shycat/.env
       echo "FAST_REFRESH=false" >> ../webapp/shycat/.env
-      echo "REACT_APP_API_URL=http://${aws_instance.shycat_instance.public_dns}:8080" >> ../webapp/shycat/.env
+      echo "REACT_APP_API_URL=https://${aws_instance.shycat_instance.public_dns}" >> ../webapp/shycat/.env
     EOT
   }
 }

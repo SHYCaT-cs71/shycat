@@ -37,6 +37,13 @@ resource "aws_security_group" "shycat_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -90,5 +97,14 @@ resource "aws_instance" "shycat_instance" {
 
   tags = {
     Name = "ShycatBackend"
+  }
+}
+
+# Create an Elastic IP and associate it with the EC2 instance
+resource "aws_eip" "shycat_eip" {
+  instance = aws_instance.shycat_instance.id
+
+  tags = {
+    Name = "ShycatElasticIP"
   }
 }
