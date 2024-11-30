@@ -1,4 +1,4 @@
-package fyi.shycat.site.config;
+package fyi.shycat.site;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
