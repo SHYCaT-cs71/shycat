@@ -1,5 +1,6 @@
 package fyi.shycat.site.rest;
 
+import fyi.shycat.site.entities.DateTime;
 import fyi.shycat.site.entities.Event;
 import fyi.shycat.site.repositories.EventRepository;
 import jakarta.inject.Inject;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 import static org.hamcrest.Matchers.hasSize;
@@ -45,6 +47,7 @@ class EventControllerUnitTest {
         var event = new Event();
         event.setId(id);
         event.setTitle(title);
+        event.setStartDateTime(new DateTime(LocalDate.of(2024, 11, 27)));
         return event;
     }
 }
