@@ -1,7 +1,7 @@
 # Sprint: 2024-12-02 Sprint 2
 
 Product website:  
-[https://shycat.fyi/](https://shycat.fyi/)
+[https://www.shycat.fyi/](https://www.shycat.fyi/)
 
 For this project, we used Spring Initializr to generate the structure for the Java Spring-based back end.  We used ChatGPT to generate the sample SQL script used for repository testing and integration REST controller testing.
 

@@ -1,7 +1,7 @@
 # Sprint: 2024-11-17 Sprint 1
 
 Product website:  
-[https://shycat.fyi/](https://shycat.fyi/)
+[https://www.shycat.fyi/](https://www.shycat.fyi/)
 
 We used ChatGPT in this project to assist with project setup and debugging and to generate mock event data.  All code other than mock event data was either based on examples from the [DaisyUI Components](https://daisyui.com/components) or hand-written during the programming sessions.
 
