@@ -168,7 +168,11 @@ We already had CD setup for the front end triggered by a Github push to main, fe
 * [CI/CD green with all tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20111425.png)
 
 ### Back End
-We first set up CI for the back end using a Github action with a Maven-based workflow [maven.yml](.github/workflows/maven.yml) - note that it's only triggered for updates to the backend folder (or to the `maven.yml` configuration file).  We later figured out how to tie in a deployment to the AWS EC2 instance we're using to run the back end.
+We first set up CI for the back end using a Github action with a Maven-based workflow [maven.yml](.github/workflows/maven.yml) - note that it's only triggered for updates to the backend folder (or to the `maven.yml` configuration file).  We later figured out how to tie in a deployment to the AWS EC2 instance we're using to run the back end.  The Github action serves to upload the application code, build it (including re-running tests locally), restart it, and do a final health check against the "/health" endpoint to make sure it's running. 
 
 #### Screenshots
-* [CI setup with Github Action - all tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20212241.png)
+* [Initial CI-only setup with Github Action - all tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20212241.png)
+* [CI/CD set up to send jar to EC2 instance](images/screenshots/Sprint_2024-12-02/backend%20ci-cd.png)
+* [Front end connected (back end not yet pre-initialized with events)](images/screenshots/Sprint_2024-12-02/frontend-backend%20communication.png)
+* [Failed test blocks workflow](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113111.png)
+* [Failing test removed, workflow completes and deploys to back end, including health check](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113826.png)
