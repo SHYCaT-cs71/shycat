@@ -70,7 +70,7 @@ Note that SHY-4 was originally several items down in the Product Backlog, so was
 
 
 ## Burndown Chart
-Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
+Reworked graph to have smooth line from 10 story points (size of sprint) to 0.  [Link to chart.](https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8dfU4/edit?gid=349255037#gid=349255037)
 
 ### Screenshots
 * [Initial chart at start of sprint](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191045.png)
@@ -138,3 +138,37 @@ The mob programming session was therefore spent in developing an initial back en
 * [Filling in expected values](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-20%20195228.png)
 * [Adding another test](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-20%20203449.png)
 
+
+### Mob Programming 2024-11-27
+We focused on finishing [SHY-62](https://evilore.atlassian.net/browse/SHY-62), specifically updating the front end JSON structure to better match the back end data structure and adding calls to the back end.  We also worked on adding full CI/CD for the front end, and at least CI for the back end.
+
+#### Present
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+#### Screenshots
+* [Updating front end Event data structure](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20201629.png)
+* [Tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20203618.png)
+* [Adding a new test that will fail](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20204224.png)
+* [Test fails!](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20204945.png)
+* [Test passes!](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20205337.png)
+
+
+## CI/CD Setup
+### Front End
+We already had CD setup for the front end triggered by a Github push to main, feeding into AWS Amplify.  After some trial and error, we figured out how to modify the configuration file [amplify.yml](amplify.yml) to run an additional `CI=true yarn test` command, so that the build will halt if a test doesn't pass, preventing deployment.
+
+#### Screenshots
+* [Updating the configuration](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20210114.png)
+* [Failing test blocks the deployment](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20213549.png)
+* [Failures prevent deployment](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20213558.png)
+* [Tests pass, deployment continues](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20213757.png)
+* [CI/CD green with all tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20111425.png)
+
+### Back End
+We first set up CI for the back end using a Github action with a Maven-based workflow [maven.yml](.github/workflows/maven.yml) - note that it's only triggered for updates to the backend folder (or to the `maven.yml` configuration file).  We later figured out how to tie in a deployment to the AWS EC2 instance we're using to run the back end.
+
+#### Screenshots
+* [CI setup with Github Action - all tests passing](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20212241.png)
