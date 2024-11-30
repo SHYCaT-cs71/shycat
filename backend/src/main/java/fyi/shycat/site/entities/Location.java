@@ -1,12 +1,16 @@
 package fyi.shycat.site.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
 
 @Embeddable
 public class Location {
 
+    @JsonProperty("locationName")
     private String name;
+
+    @JsonProperty("locationAddress")
     private String address;
 
     @Embedded
@@ -28,6 +32,7 @@ public class Location {
         this.address = address;
     }
 
+    @JsonProperty("locationGeo")
     public GeoLocation getGeo() {
         return geo;
     }

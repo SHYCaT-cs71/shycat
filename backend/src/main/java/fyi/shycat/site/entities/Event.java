@@ -1,5 +1,8 @@
 package fyi.shycat.site.entities;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -20,18 +23,21 @@ public class Event {
     @Column(name = "description", length = 4000)
     private String description;
 
+    @JsonIgnore
     @AttributeOverrides({
             @AttributeOverride(name = "date", column = @Column(name = "start_date", nullable = false)),
             @AttributeOverride(name = "time", column = @Column(name = "start_time"))
     })
     DateTime startDateTime;
 
+    @JsonIgnore
     @AttributeOverrides({
             @AttributeOverride(name = "date", column = @Column(name = "end_date")),
             @AttributeOverride(name = "time", column = @Column(name = "end_time"))
     })
     DateTime endDateTime;
 
+    @JsonUnwrapped
     @Embedded
     @AttributeOverrides({
             @AttributeOverride(name = "name", column = @Column(name = "location_name")),
@@ -45,10 +51,10 @@ public class Event {
 
     private String originalLink;
 
+    private String imageUrl;
+
     @ElementCollection
     private Set<String> tags;
-
-    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -82,12 +88,22 @@ public class Event {
         this.description = description;
     }
 
+    @JsonGetter
+    public String getStartDate() {
+        return startDateTime.toString();
+    }
+
     public DateTime getStartDateTime() {
         return startDateTime;
     }
 
     public void setStartDateTime(DateTime startDateTime) {
         this.startDateTime = startDateTime;
+    }
+
+    @JsonGetter
+    public String getEndDate() {
+        return endDateTime != null ? endDateTime.toString() : null;
     }
 
     public DateTime getEndDateTime() {
