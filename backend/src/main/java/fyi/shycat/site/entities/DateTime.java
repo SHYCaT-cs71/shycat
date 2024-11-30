@@ -17,6 +17,10 @@ public class DateTime {
     public DateTime() {
     }
 
+    public DateTime(LocalDate date) {
+        this.date = date;
+    }
+
     public DateTime(LocalDate date, LocalTime time) {
         this.date = date;
         this.time = time;
@@ -40,7 +44,7 @@ public class DateTime {
 
     @Override
     public String toString() {
-        return date.toString() + (time != null ? " " + time.format(DateTimeFormatter.ISO_OFFSET_TIME) : "");
+        return date.toString() + (time != null ? "T" + time.format(DateTimeFormatter.ISO_LOCAL_TIME) : "");
     }
 
     @Override
