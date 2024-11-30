@@ -35,8 +35,8 @@ jobs:
         host: ${{ secrets.SHYCAT_EC2_HOST }}
         username: ec2-user
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
-        source: deploy/app.jar
-        target: /opt/shycat/app.jar
+        source: backend/
+        target: /opt/shycat/
 
     - name: Restart Application on EC2
       uses: appleboy/ssh-action@v0.1.7
@@ -45,4 +45,7 @@ jobs:
         username: ec2-user
         key: ${{ secrets.SHYCAT_EC2_SSH_KEY }}
         script: |
+          cd /opt/shycat/backend
+          ./mvnw clean install
+          ./mvnw clean package
           sudo systemctl restart shycat.service
