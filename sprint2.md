@@ -157,6 +157,19 @@ We focused on finishing [SHY-62](https://evilore.atlassian.net/browse/SHY-62), s
 * [Test passes!](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-27%20205337.png)
 
 
+## Tests Added
+* All back end tests are new for this sprint, though many are not technically "unit" tests.
+    * entities.EventJsonMappingTest (3 tests)
+    * repositories.EventRepositoryTest (4 tests)
+    * rest.EventControllerIntegrationTest (1 test)
+    * rest.EventControllerUnitTest (1 test)
+    * rest.HealthControllerUnitTest (1 test)
+    * ShycatApplicationTests (1 test)
+* Removed (temporarily) 3 front end unit tests from Navbar.test.js, since the elements have also been (temporarily) removed as they're non-functional, per feedback from instructor.
+* Added 2 unit tests to EventCard.test.js to check end date rendering and new getSummary() method.
+* Added unit test to EventList.test.js to check end date rendering.
+
+
 ## CI/CD Setup
 ### Front End
 We already had CD setup for the front end triggered by a Github push to main, feeding into AWS Amplify.  After some trial and error, we figured out how to modify the configuration file [amplify.yml](amplify.yml) to run an additional `CI=true yarn test` command, so that the build will halt if a test doesn't pass, preventing deployment.
