@@ -3,6 +3,13 @@
 Product website:  
 [https://www.shycat.fyi/](https://www.shycat.fyi/)
 
+Back end:
+* [Event List Endpoint](https://api.shycat.fyi/events)
+* [Health Endpoint](https://api.shycat.fyi/health)
+
+#### Screenshots
+* [Front end pulling events from back end](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20122208.png)
+
 For this project, we used Spring Initializr to generate the structure for the Java Spring-based back end.  We used ChatGPT to generate the sample SQL script used for repository testing and integration REST controller testing.
 
 ## Sprint Planning 2024-11-18
@@ -158,7 +165,7 @@ We focused on finishing [SHY-62](https://evilore.atlassian.net/browse/SHY-62), s
 
 
 ## Tests Added
-* All back end tests are new for this sprint, though many are not technically "unit" tests.
+* All back end tests are new for this sprint.
     * entities.EventJsonMappingTest (3 tests)
     * repositories.EventRepositoryTest (4 tests)
     * rest.EventControllerIntegrationTest (1 test)
@@ -190,4 +197,3 @@ We first set up CI for the back end using a Github action with a Maven-based wor
 * [Front end connected (back end not yet pre-initialized with events)](images/screenshots/Sprint_2024-12-02/frontend-backend%20communication.png)
 * [Failed test blocks workflow](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113111.png)
 * [Failing test removed, workflow completes and deploys to back end, including health check](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113826.png)
-* [Front end pulling events from back end](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20122208.png)
