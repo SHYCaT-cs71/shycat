@@ -73,6 +73,8 @@ We removed SHY-2, SHY-13, and SHY-44, and replaced them with:
 
 Note that SHY-4 was originally several items down in the Product Backlog, so wasn't initially ready to be pulled into a sprint - in part because it was too large and non-specific.  We decomposed it into SHY-4 and SHY-62, and added acceptance criteria and programmer tasks.
 
+We kept the same forecast (the rationale hasn't changed) and sprint goal, since it still reflects what we hope to accomplish.
+
 ### Screenshots
 * [Moving front end stories out of sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20115437.png)
 * [Filling in new SHY-62 item](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121623.png)
