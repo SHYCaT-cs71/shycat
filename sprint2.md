@@ -97,6 +97,8 @@ Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
 * [Initial chart at start of sprint](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191045.png)
 * [Updated to fill through 2024-11-20](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-20%20191144.png)
 * [Reworked for changes to sprint total (now 11 story points)](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-11-24%20123922.png)
+* [Sprint almost finished](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-12-01%20105522.png)
+* [Sprint completed](images/screenshots/Sprint_2024-12-02/Burndown%20screenshot%202024-12-02%20094852.png)
 
 
 ## Daily Scrum
