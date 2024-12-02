@@ -45,12 +45,21 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+
+      {/* Display section for fetched backend events */}
       <section>
+        <h2>Events from Backend</h2>
         {events.length > 0 ? (
           <EventList events={events} />
         ) : (
           <p>No events fetched from the backend yet.</p>
         )}
+      </section>
+
+      {/* TEMP: Display section for mock events */}
+      <section>
+        <h2>Mock Events</h2>
+        <EventList events={mockHarvardEvents} />
       </section>
     </div>
   );
