@@ -17,6 +17,11 @@ For this project, we used Spring Initializr to generate the structure for the Ja
 * [Sprint Planning Redux 2024-11-24](#sprint-planning-redux-2024-11-24)
 * [Kanban Board Screenshots](#kanban-board-screenshots)
 * [Burndown Chart](#burndown-chart)
+* [Daily Scrum](#daily-scrum)
+* [Group Programming Session](#group-programming-sessions)
+* [Tests Added](#tests-added)
+* [CI/CD Setup](#cicd-setup)
+* [Sprint Review](#sprint-review-2024-12-02)
 * 
 
 ## Sprint Planning 2024-11-18
@@ -142,6 +147,7 @@ Reworked graph to have smooth line from 10 story points (size of sprint) to 0.
 To cope with the scheduling/availability problems, we plan to adopt agile flexibility in scheduling meetings and setting up programming sessions, switching to pair programming at times to reduce the number of people whose schedules need to align.  
 To address the issue with the current backlog items and sprint plan not meeting the instructor requirements based on feedback, today we will refocus the sprint and update backlog items.
 
+
 ## Group Programming Sessions
 
 ### Mob Programming 2024-11-20
@@ -214,4 +220,41 @@ We first set up CI for the back end using a Github action with a Maven-based wor
 * [Failing test removed, workflow completes and deploys to back end, including health check](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113826.png)
 
 
-## Sprint Review
+## Sprint Review 2024-12-02
+Present:
+* Shelby Grasso (Product Owner)
+* Yu Lai
+* Christina Molodowitch
+* Alexa Barry (Stakeholder)
+* Tyler Malka (Scrum Master)
+
+Recording link:  
+https://harvard.zoom.us/rec/share/yUC4pVqSe5iwPBLW5W4l5Jpx-QHoCulGB6Q9qH-xZFgKZYLc-HP9SuNtO_p1nVfy.CUFEBeicN-5PbQuA
+
+### Screenshots
+* [Scrum Team plus Stakeholder present](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20090321.png)
+* [Product demo](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20090610.png)
+* [Getting feedback from stakeholder](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20090821.png)
+* [New PBI added based on feedback](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20092334.png)
+
+### Product Demo
+* Demoed product to stakeholder at https://shycat.fyi
+    * Noted pivot in sprint planning based on instructor feedback 
+    * Added back end
+    * Cards now include end date/time and address (if present)
+    * Still working on adding the web scraping
+* Stakeholder gave feedback on current product demo
+    * Key features to see on event cards: location and start date/time
+    * Date/time format should be readable to everyday person (currently more "programmer" format), and should include time zone
+    * If event doesn't have a date/time, card should have a message noting this
+    * Make sure it's very clear how to get to event page to register - clear "call to action"
+    * Scraped events may not have an image, or a poor-quality image - should consider having default stock photo to display in this case
+
+### Product Backlog Refinement
+* Based on stakeholder feedback, added new PBI for date/time format and stock image [(SHY-75)](https://evilore.atlassian.net/browse/SHY-75) to top of backlog.
+* Based on stakeholder feedback and discussion, moved event creation items (SHY-2 and SHY-44) to bottom of backlog.
+    * Currently, stakeholder already has to submit event info on multiple sites to have the new event listed, so doesn't need (or want) to have to also submit it to Shycat.
+    * Most PBIs benefit users who want to find events.  Event creation PBIs benefit much smaller subset of users who want to host an event but aren't part of a larger organization and don't have infrastructure in place to publicize the event elsewhere.
+* Remaining item priorities unchanged.
+
+
