@@ -16,6 +16,8 @@ For this project, we used Spring Initializr to generate the structure for the Ja
 * [Sprint Planning 2024-11-18](#sprint-planning-2024-11-18)
 * [Sprint Planning Redux 2024-11-24](#sprint-planning-redux-2024-11-24)
 * [Kanban Board Screenshots](#kanban-board-screenshots)
+* [Burndown Chart](#burndown-chart)
+* 
 
 ## Sprint Planning 2024-11-18
 
@@ -78,13 +80,13 @@ Kanban board link: https://evilore.atlassian.net/jira/software/projects/SHY/boar
 
 However, as noted in the discussion on Slack, the Kanban Board we're using disappears when the Sprint is closed.  Below are screenshots of the board at different points in the Sprint.
 
-* [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
-* [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175912.png)
-* [Sprint name updated with correct end date](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png)
-* [Board following restructure of sprint, with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121739.png)
-* [Board without child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20143840.png)
-* [Board at end of sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20094947.png)
-* [Board at end of sprint with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20095002.png)
+* [Sprint started](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-11-18%20175906.png)
+* [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-11-18%20175912.png)
+* [Sprint name updated with correct end date](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-11-18%20180216.png)
+* [Board following restructure of sprint, with child issues displayed](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-11-24%20121739.png)
+* [Board without child issues displayed](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-11-24%20143840.png)
+* [Board at end of sprint](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-12-02%20094947.png)
+* [Board at end of sprint with child issues displayed](images/screenshots/Sprint_2024-12-02/Kanban%20screenshot%202024-12-02%20095002.png)
 
 
 ## Burndown Chart
