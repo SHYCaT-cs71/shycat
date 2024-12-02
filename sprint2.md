@@ -12,6 +12,11 @@ Back end:
 
 For this project, we used Spring Initializr to generate the structure for the Java Spring-based back end.  We used ChatGPT to generate the sample SQL script used for repository testing and integration REST controller testing.
 
+#### Sections
+* [Sprint Planning 2024-11-18](#sprint-planning-2024-11-18)
+* [Sprint Planning Redux 2024-11-24](#sprint-planning-redux-2024-11-24)
+* [Kanban Board Screenshots](#kanban-board-screenshots)
+
 ## Sprint Planning 2024-11-18
 
 #### Present
@@ -69,11 +74,17 @@ Note that SHY-4 was originally several items down in the Product Backlog, so was
 
 
 ## Kanban Board Screenshots
+Kanban board link: https://evilore.atlassian.net/jira/software/projects/SHY/boards/1
+
+However, as noted in the discussion on Slack, the Kanban Board we're using disappears when the Sprint is closed.  Below are screenshots of the board at different points in the Sprint.
+
 * [Sprint started](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175906.png)
 * [Retrospective PBI completed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20175912.png)
 * [Sprint name updated with correct end date](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-18%20180216.png)
 * [Board following restructure of sprint, with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20121739.png)
 * [Board without child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-24%20143840.png)
+* [Board at end of sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20094947.png)
+* [Board at end of sprint with child issues displayed](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20095002.png)
 
 
 ## Burndown Chart
@@ -197,3 +208,6 @@ We first set up CI for the back end using a Github action with a Maven-based wor
 * [Front end connected (back end not yet pre-initialized with events)](images/screenshots/Sprint_2024-12-02/frontend-backend%20communication.png)
 * [Failed test blocks workflow](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113111.png)
 * [Failing test removed, workflow completes and deploys to back end, including health check](images/screenshots/Sprint_2024-12-02/Screenshot%202024-11-30%20113826.png)
+
+
+## Sprint Review
