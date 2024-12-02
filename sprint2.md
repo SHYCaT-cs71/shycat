@@ -12,7 +12,7 @@ Back end:
 
 For this project, we used Spring Initializr to generate the structure for the Java Spring-based back end.  We used ChatGPT to generate the sample SQL script used for repository testing and integration REST controller testing.
 
-#### Sections
+#### Sprint README Sections
 * [Sprint Planning 2024-11-18](#sprint-planning-2024-11-18)
 * [Sprint Planning Redux 2024-11-24](#sprint-planning-redux-2024-11-24)
 * [Kanban Board Screenshots](#kanban-board-screenshots)
@@ -22,7 +22,7 @@ For this project, we used Spring Initializr to generate the structure for the Ja
 * [Tests Added](#tests-added)
 * [CI/CD Setup](#cicd-setup)
 * [Sprint Review](#sprint-review-2024-12-02)
-* 
+* [Sprint Retrospective](#sprint-retrospective-2024-12-02)
 
 ## Sprint Planning 2024-11-18
 
@@ -258,3 +258,36 @@ https://harvard.zoom.us/rec/share/yUC4pVqSe5iwPBLW5W4l5Jpx-QHoCulGB6Q9qH-xZFgKZY
 * Remaining item priorities unchanged.
 
 
+## Sprint Retrospective 2024-12-02
+Present:
+* Shelby Grasso (Product Owner)
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (Scrum Master)
+
+Used Plus-Delta Retrospective with Miro board.
+
+Plus note groups:
+* Flexible priorities (3)
+* Connected components (5)
+* Teamwork (4)
+* Working components (2)
+* Lowering forecast was good idea (1)
+* Great feedback from stakeholder (1)
+
+Delta note groups:
+* Didn't finish sprint issues (4)
+* Team organization/logistics lacking (2)
+* Mob programming may not be optimum (2)
+* Not utilizing pair programming (2)
+
+Focused on the mob/pair programming delta.  We all agreed that with skillsets being somewhat siloed, mob programming isn't the most effective (or interesting) way for us to work.  We'll work on setting up pair programming sessions instead, and ensure that different sprint backlog items match different skillset so they can be tackled in parallel.  
+
+Added [PBI SHY-76](https://evilore.atlassian.net/browse/SHY-76) to do this for the next sprint.  PBI moved to top of product backlog.
+
+### Screenshots
+* [Pluses and Deltas filled in](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20093421.png)
+* [Notes grouped together](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20094300.png)
+* [Added new retrospective backlog item](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20094816.png)
+* [Completed sprint](images/screenshots/Sprint_2024-12-02/Screenshot%202024-12-02%20095148.png)
