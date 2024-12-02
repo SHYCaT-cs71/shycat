@@ -97,7 +97,7 @@ However, as noted in the discussion on Slack, the Kanban Board we're using disap
 
 
 ## Burndown Chart
-Reworked graph to have smooth line from 10 story points (size of sprint) to 0.  
+Reworked graph to have smooth line from 11 story points (size of sprint) to 0.  
 [Link to chart.](https://docs.google.com/spreadsheets/d/1nUfLnhID7GA6UObXBBVUMOgjMd3ZHZWAGSbBza8dfU4/edit?gid=349255037#gid=349255037)
 
 ### Screenshots
