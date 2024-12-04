@@ -30,7 +30,10 @@ const EventCard = ({ event }) => {
     return (
         <div data-testid="event-card" className="card card-compact bg-base-100 w-96 shadow-xl">
             <figure>
-                <img src={event.imageUrl} alt={event.title} />
+            <img
+            src={event.imageUrl || "/shycatfallback.jpg"}
+            alt={event.title || "Default Event Title"}
+            />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{event.title}</h2>

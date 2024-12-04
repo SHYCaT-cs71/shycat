@@ -66,3 +66,27 @@ test('get truncated description', () => {
     "This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds."
   )
 });
+
+
+test("falls back to default image if imageUrl is invalid", () => {
+  const invalidUrl = null; // Simulate an invalid or missing URL
+  const fallbackUrl = "/shycatfallback.jpg";
+
+  render(
+    <EventCard
+      event={{
+        imageUrl: invalidUrl,
+        title: "Test Event",
+        summary: "summary",
+        description: "description",
+        tags: [],
+        startDate: "2024-12-04",
+      }}
+    />
+  );
+
+  const image = screen.getByRole("img");
+
+  // Assert that the image src is set to the fallback URL
+  expect(image).toHaveAttribute("src", fallbackUrl);
+});
