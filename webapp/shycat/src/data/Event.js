@@ -39,7 +39,7 @@ export const mockHarvardEvents = [
         host: "Harvard Innovation Labs",
         originalLink: "https://example.com/harvard-startup-showcase",
         tags: ["Entrepreneurship", "Startups", "Networking"],
-        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
+        imageUrl: ``
     }),
     new Event({
         title: "Veritas Forum: Ethics in AI",
