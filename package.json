@@ -1,0 +1,16 @@
+{
+  "name": "shycat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SHYCaT-cs71/shycat.git",
+  "author": "evilore <evilore@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "jest": "^29.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1"
+  }
+}

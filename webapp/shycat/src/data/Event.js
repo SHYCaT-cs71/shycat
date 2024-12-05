@@ -39,7 +39,7 @@ export const mockHarvardEvents = [
         host: "Harvard Innovation Labs",
         originalLink: "https://example.com/harvard-startup-showcase",
         tags: ["Entrepreneurship", "Startups", "Networking"],
-        imageUrl: ``
+       imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Veritas Forum: Ethics in AI",
@@ -51,7 +51,7 @@ export const mockHarvardEvents = [
         host: "Veritas Forum",
         originalLink: "https://example.com/veritas-forum-ai",
         tags: ["Ethics", "AI", "Lecture"],
-        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
+        imageUrl: ""
     }),
     new Event({
         title: "Harvard-Yale Debate",

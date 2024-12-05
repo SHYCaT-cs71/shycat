@@ -12,3 +12,4 @@
 **/.env
 .idea
 terraform/variable_secrets.tf
+node_modules
