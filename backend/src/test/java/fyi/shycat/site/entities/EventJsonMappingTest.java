@@ -28,9 +28,13 @@ public class EventJsonMappingTest {
         event.setEndDateTime(new DateTime(LocalDate.of(2024, 11, 28),
                                           LocalTime.of(10, 36, 44)));
         var location = new Location();
+        location.setType("Place");
         location.setName("Location name");
         location.setAddress("123 Main St, Cambridge");
-        location.setGeo(new Location.GeoLocation(41.3, -57.8));
+        location.setLocationUrl("https://location.nonsense.com");
+        var geo = new Location.GeoLocation(41.3, -57.8);
+        geo.setType("GeoCoordinates");
+        location.setGeo(geo);
         event.setLocation(location);
 
         var json = jacksonTester.write(event);
@@ -38,8 +42,11 @@ public class EventJsonMappingTest {
         assertThat(json).extractingJsonPathStringValue("$.startDate").isEqualTo("2024-11-27T20:05:15");
         assertThat(json).extractingJsonPathStringValue("$.endDate").isEqualTo("2024-11-28T10:36:44");
         assertThat(json).extractingJsonPathStringValue("$.host").isEqualTo("Event host");
+        assertThat(json).extractingJsonPathStringValue("$.locationType").isEqualTo("Place");
         assertThat(json).extractingJsonPathStringValue("$.locationName").isEqualTo("Location name");
         assertThat(json).extractingJsonPathStringValue("$.locationAddress").isEqualTo("123 Main St, Cambridge");
+        assertThat(json).extractingJsonPathStringValue("$.locationUrl").isEqualTo("https://location.nonsense.com");
+        assertThat(json).extractingJsonPathStringValue("$.locationGeo.geoType").isEqualTo("GeoCoordinates");
         assertThat(json).extractingJsonPathNumberValue("$.locationGeo.latitude").isEqualTo(41.3);
         assertThat(json).extractingJsonPathNumberValue("$.locationGeo.longitude").isEqualTo(-57.8);
     }
@@ -52,6 +59,7 @@ public class EventJsonMappingTest {
         event.setStartDateTime(new DateTime(LocalDate.of(2024, 11, 27), null));
         event.setEndDateTime(new DateTime(LocalDate.of(2024, 11, 28), null));
         var location = new Location();
+        location.setType("Place");
         location.setName("Location name");
         event.setLocation(location);
 
@@ -60,8 +68,10 @@ public class EventJsonMappingTest {
         assertThat(json).extractingJsonPathStringValue("$.startDate").isEqualTo("2024-11-27");
         assertThat(json).extractingJsonPathStringValue("$.endDate").isEqualTo("2024-11-28");
         assertThat(json).extractingJsonPathStringValue("$.host").isEqualTo("Event host");
+        assertThat(json).extractingJsonPathStringValue("$.locationType").isEqualTo("Place");
         assertThat(json).extractingJsonPathStringValue("$.locationName").isEqualTo("Location name");
         assertThat(json).hasEmptyJsonPathValue("$.locationAddress");
+        assertThat(json).hasEmptyJsonPathValue("$.locationUrl");
         assertThat(json).hasEmptyJsonPathValue("$.locationGeo");
     }
 
@@ -77,14 +87,17 @@ public class EventJsonMappingTest {
         assertThat(json).extractingJsonPathStringValue("$.startDate").isEqualTo("2024-11-27");
         assertThat(json).hasEmptyJsonPathValue("$.endDate");
         assertThat(json).hasEmptyJsonPathValue("$.host");
+        assertThat(json).hasEmptyJsonPathValue("$.locationType");
         assertThat(json).hasEmptyJsonPathValue("$.locationName");
         assertThat(json).hasEmptyJsonPathValue("$.locationAddress");
+        assertThat(json).hasEmptyJsonPathValue("$.locationUrl");
         assertThat(json).hasEmptyJsonPathValue("$.locationGeo");
     }
 
     Event createBaseEvent(long id) {
         var event = new Event();
         event.setId(id);
+        event.setOriginalId("1234567890");
         event.setTitle("Event Title");
         event.setSummary("Event has a slightly longer summary.");
         event.setDescription("Event description should be even longer than the summary.");
@@ -96,6 +109,7 @@ public class EventJsonMappingTest {
 
     void checkBaseEvent(JsonContent<Event> json, int id) {
         assertThat(json).extractingJsonPathNumberValue("$.id").isEqualTo(id);
+        assertThat(json).extractingJsonPathStringValue("$.originalId").isEqualTo("1234567890");
         assertThat(json).extractingJsonPathStringValue("$.title").isEqualTo("Event Title");
         assertThat(json).extractingJsonPathStringValue("$.summary")
                         .isEqualTo("Event has a slightly longer summary.");

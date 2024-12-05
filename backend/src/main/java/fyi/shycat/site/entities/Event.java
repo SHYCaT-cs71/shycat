@@ -14,6 +14,9 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "originalId")
+    private String originalId;
+
     @Column(name = "title", nullable = false)
     private String title;
 
@@ -40,8 +43,11 @@ public class Event {
     @JsonUnwrapped
     @Embedded
     @AttributeOverrides({
+            @AttributeOverride(name = "type", column = @Column(name = "location_type")),
             @AttributeOverride(name = "name", column = @Column(name = "location_name")),
             @AttributeOverride(name = "address", column = @Column(name = "address", length = 500)),
+            @AttributeOverride(name = "locationUrl", column = @Column(name = "location_url", length = 500)),
+            @AttributeOverride(name = "geo.type", column = @Column(name = "geo_type")),
             @AttributeOverride(name = "geo.latitude", column = @Column(name = "latitude")),
             @AttributeOverride(name = "geo.longitude", column = @Column(name = "longitude"))
     })
@@ -62,6 +68,14 @@ public class Event {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getOriginalId() {
+        return originalId;
+    }
+
+    public void setOriginalId(String originalId) {
+        this.originalId = originalId;
     }
 
     public String getTitle() {

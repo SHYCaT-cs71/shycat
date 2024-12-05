@@ -7,14 +7,28 @@ import jakarta.persistence.Embedded;
 @Embeddable
 public class Location {
 
+    @JsonProperty("locationType")
+    private String type;
+
     @JsonProperty("locationName")
     private String name;
 
     @JsonProperty("locationAddress")
     private String address;
 
+    @JsonProperty("locationUrl")
+    private String locationUrl;
+
     @Embedded
     private GeoLocation geo;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getName() {
         return name;
@@ -32,6 +46,14 @@ public class Location {
         this.address = address;
     }
 
+    public String getLocationUrl() {
+        return locationUrl;
+    }
+
+    public void setLocationUrl(String locationUrl) {
+        this.locationUrl = locationUrl;
+    }
+
     @JsonProperty("locationGeo")
     public GeoLocation getGeo() {
         return geo;
@@ -43,6 +65,8 @@ public class Location {
 
     @Embeddable
     public static class GeoLocation {
+        @JsonProperty("geoType")
+        private String type;
         private double latitude;
         private double longitude;
 
@@ -52,6 +76,14 @@ public class Location {
         public GeoLocation(double latitude, double longitude) {
             this.latitude = latitude;
             this.longitude = longitude;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
         }
 
         public double getLatitude() {
