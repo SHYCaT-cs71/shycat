@@ -1,8 +1,6 @@
 package fyi.shycat.site.web_scraping;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import fyi.shycat.site.entities.Location;
-import jakarta.persistence.Embedded;
 
 public class LocalistLocationJson {
 
@@ -16,8 +14,7 @@ public class LocalistLocationJson {
     @JsonProperty("url")
     private String locationUrl;
 
-    @Embedded
-    private Location.GeoLocation geo;
+    private LocalistLocationJson.GeoLocation geo;
 
     public String getType() {
         return type;
@@ -51,11 +48,11 @@ public class LocalistLocationJson {
         this.locationUrl = locationUrl;
     }
 
-    public Location.GeoLocation getGeo() {
+    public LocalistLocationJson.GeoLocation getGeo() {
         return geo;
     }
 
-    public void setGeo(Location.GeoLocation geo) {
+    public void setGeo(LocalistLocationJson.GeoLocation geo) {
         this.geo = geo;
     }
 
