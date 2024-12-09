@@ -2,6 +2,8 @@ import { render, screen } from '@testing-library/react';
 import EventList from './EventList';
 import { getEventSummary } from "./EventCard";
 import { mockHarvardEvents } from '../data/Event';
+import { formatDate } from './EventCard'; // Import formatDate to match EventCard's logic
+
 
 test('renders EventList with the correct number of EventCards', () => {
     render(<EventList events={mockHarvardEvents} />);
@@ -47,7 +49,8 @@ test('renders all events with correct start dates', () => {
     render(<EventList events={mockHarvardEvents} />);
 
     mockHarvardEvents.forEach((event) => {
-        const startDate = screen.getByText('Start: ' + event.startDate);
+        const formattedStartDate = `Start: ${formatDate(event.startDate)}`; // Use formatDate
+        const startDate = screen.getByText(formattedStartDate);
         expect(startDate).toBeInTheDocument();
     });
 });
@@ -57,8 +60,9 @@ test('renders all events with correct end dates', () => {
 
     mockHarvardEvents.forEach((event) => {
         if (event.endDate) {
-            const startDate = screen.getByText('End: ' + event.endDate);
-            expect(startDate).toBeInTheDocument();
+            const formattedEndDate = `End: ${formatDate(event.endDate)}`; // Use formatDate
+            const endDate = screen.getByText(formattedEndDate);
+            expect(endDate).toBeInTheDocument();
         }
     });
 });

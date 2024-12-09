@@ -1,6 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import EventCard, { getEventSummary } from './EventCard';
 import { mockHarvardEvents } from '../data/Event';
+import { format, parseISO } from 'date-fns';
+
+
+// Match component logic for formatting dates
+const formatDate = (dateString) => {
+  const parsedDate = dateString.includes('T')
+    ? parseISO(dateString)
+    : parse(dateString, 'yyyy-MM-dd', new Date());
+  const formatString = dateString.includes('T') ? 'MMMM do, yyyy h:mm a (zzz)' : 'MMMM do, yyyy';
+  return format(parsedDate, formatString);
+};
 
 const mockHarvardEvent = mockHarvardEvents[0];
 
@@ -44,16 +55,19 @@ test('location exists', () => {
 
 test('start date exists', () => {
   render(<EventCard event={mockHarvardEvent} />);
-
-  const date = screen.getByText('Start: ' + mockHarvardEvent.startDate);
-  expect(date).toBeInTheDocument();
+  
+  const formattedStartDate = `Start: ${formatDate(mockHarvardEvent.startDate)}`;
+  const startDate = screen.getByText(formattedStartDate);
+  expect(startDate).toBeInTheDocument();
 });
+
 
 test('end date exists', () => {
   render(<EventCard event={mockHarvardEvent} />);
-
-  const date = screen.getByText('End: ' + mockHarvardEvent.endDate);
-  expect(date).toBeInTheDocument();
+  
+  const formattedEndDate = `End: ${formatDate(mockHarvardEvent.endDate)}`;
+  const endDate = screen.getByText(formattedEndDate);
+  expect(endDate).toBeInTheDocument();
 });
 
 test('get truncated description', () => {
