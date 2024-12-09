@@ -53,8 +53,20 @@ public class EventRepositoryTest {
         eventRepository.save(event);
         assertThat(event.getId(), is(notNullValue()));
 
-        Optional<Event> savedEvent = eventRepository.findById(event.getId());
-        assertThat(savedEvent.isPresent(), is(true));
+        Optional<Event> savedEventOpt = eventRepository.findById(event.getId());
+        assertThat(savedEventOpt.isPresent(), is(true));
+        var savedEvent = savedEventOpt.get();
+        assertThat(savedEvent.getOriginalId(), is(event.getOriginalId()));
+        assertThat(savedEvent.getTitle(), is(event.getTitle()));
+        assertThat(savedEvent.getSummary(), is(event.getSummary()));
+        assertThat(savedEvent.getDescription(), is(event.getDescription()));
+        assertThat(savedEvent.getStartDateTime(), is(event.getStartDateTime()));
+        assertThat(savedEvent.getEndDateTime(), is(event.getEndDateTime()));
+        assertThat(savedEvent.getLocation(), is(event.getLocation()));
+        assertThat(savedEvent.getHost(), is(event.getHost()));
+        assertThat(savedEvent.getOriginalLink(), is(event.getOriginalLink()));
+        assertThat(savedEvent.getImageUrl(), is(event.getImageUrl()));
+        assertThat(savedEvent.getTags(), is(event.getTags()));
     }
 
     @Test
@@ -93,6 +105,7 @@ public class EventRepositoryTest {
     }
 
     void checkEvent(Event event) {
+        assertThat(event.getOriginalId(), is("10001"));
         assertThat(event.getTitle(), is("Test title"));
         assertThat(event.getSummary(), is("An exciting showcase where Harvard entrepreneurs and innovators present " +
                                           "their startup ideas."));
@@ -106,8 +119,10 @@ public class EventRepositoryTest {
         assertThat(event.getHost(), is("Harvard Innovation Labs"));
         assertThat(event.getLocation(), is(notNullValue()));
         var location = event.getLocation();
+        assertThat(location.getType(), is("Place"));
         assertThat(location.getName(), is("Harvard i-lab, Batten Hall"));
         assertThat(location.getAddress(), is("125 Western Ave, Allston"));
+        assertThat(location.getLocationUrl(), is("https://nonsense.com"));
         assertThat(location.getGeo(), is(notNullValue()));
         assertThat(location.getGeo().getLatitude(), is(closeTo(42.36405444183414, 1e-8)));
         assertThat(location.getGeo().getLongitude(), is(closeTo(-71.12418004499675, 1e-8)));
