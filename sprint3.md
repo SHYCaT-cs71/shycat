@@ -55,3 +55,31 @@ Screenshots taken since board disappears once sprint is completed.
 ### Screenshots
 * [Start of sprint](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-02%20172355.png)
 
+
+## Group Programming
+
+### Mob/Pair Programming 2024-12-04
+We split into two groups to do pair/group programming, one group focused on the back end SHY-4 issue and the other focused on the front end SHY-75 issue.  [Whole group image before splitting.](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20180504.png)
+
+#### Back End
+* Hamza Hashmi
+* Christina Molodowitch
+
+*Screenshots*
+* [Pair programming](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20182300.png)
+* [TDD test failed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20182800.png)
+* [Test passes](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20183100.png)
+
+#### Front End
+* Shelby Grasso
+* Yu Lai
+* Tyler Malka
+
+*Screenshots*
+* [TDD test fails](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20184732.png)
+* [Test passes](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20185320.png)
+
+#### Whole Group Rejoins
+Yu had to leave, but the remaining 4 rejoined group - SHY-75 completed
+* [Front end CI/CD](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20190942.png)
+* [Updated front end](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20191042.png)
