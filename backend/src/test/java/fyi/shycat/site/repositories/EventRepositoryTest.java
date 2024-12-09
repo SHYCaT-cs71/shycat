@@ -28,6 +28,7 @@ public class EventRepositoryTest {
     @Test
     void testSave() {
         var event = new Event();
+        event.setOriginalId("20010");
         event.setTitle("Harvard Startup Showcase");
         event.setSummary("An exciting showcase where Harvard entrepreneurs and innovators present their startup ideas.");
         event.setDescription("This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds. Innovators pitch their projects to potential investors, gaining invaluable feedback and visibility. From tech startups to social enterprises, attendees will see a diverse array of ventures aimed at addressing real-world issues. It’s also a great networking opportunity for anyone interested in entrepreneurship and innovation.\",\n");
@@ -42,8 +43,10 @@ public class EventRepositoryTest {
         event.setImageUrl("https://picsum.photos/800/600?random=1003");
 
         var location = new Location();
+        location.setType("place");
         location.setName("Sanders Theatre, Cambridge, MA");
         location.setAddress("11 Divinity Avenue, Cambridge");
+        location.setLocationUrl("https://nonsense.com");
         var geo = new Location.GeoLocation(42.377512, -71.114127);
         location.setGeo(geo);
         event.setLocation(location);
