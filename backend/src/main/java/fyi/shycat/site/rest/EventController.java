@@ -2,6 +2,8 @@ package fyi.shycat.site.rest;
 
 import fyi.shycat.site.entities.Event;
 import fyi.shycat.site.repositories.EventRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,7 @@ import java.util.List;
 public class EventController {
 
     private final EventRepository eventRepository;
+    private static final Logger LOG = LoggerFactory.getLogger(EventController.class);
 
     public EventController(EventRepository eventRepository) {
         this.eventRepository = eventRepository;
@@ -20,6 +23,7 @@ public class EventController {
 
     @GetMapping("")
     public List<Event> getEvents() {
+        LOG.debug("getEvents");
         return eventRepository.findAll();
     }
 }
