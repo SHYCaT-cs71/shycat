@@ -42,6 +42,14 @@ public class DateTime {
         this.time = time;
     }
 
+    public void addDays(int days) {
+        date = date.plusDays(days);
+    }
+
+    public void addHours(int hours) {
+        time = time.plusHours(hours);
+    }
+
     @Override
     public String toString() {
         return date.toString() + (time != null ? "T" + time.format(DateTimeFormatter.ISO_LOCAL_TIME) : "");
