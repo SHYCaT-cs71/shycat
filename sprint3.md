@@ -132,6 +132,7 @@ We split into two groups to do pair/group programming, one group focused on the 
 Yu had to leave, but the remaining 4 rejoined group - SHY-75 completed
 * [Updated front end](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20191042.png)
 
+
 ### Mob Programming 2024-12-08
 We focused on the SHY-4 web scraping issue.
 
@@ -146,11 +147,38 @@ We focused on the SHY-4 web scraping issue.
 * [Test passes after implementing method](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20165618.png)
 
 
+### Mob/Pair Programming 2024-12-09
+We split into two groups again, to focus separately on web scraping (SHY-4) for the back end and date/time formatting (SHY-77) for the front end.
+
+
+#### Back End
+* Hamza Hashmi
+* Christina Molodowitch
+
+*Screenshots*
+* [TDD test failed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20172700.png)
+* [Another TDD test failed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20174300.png)
+* [Filling in method to make test above pass](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20174310.png)
+
+#### Front End
+* Shelby Grasso
+* Yu Lai
+* Christina Molodowitch (joined towards the end)
+* Tyler Malka
+
+*Screenshots*
+* [Mob programming](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20170629.png)
+* [Test fails](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20173557.png)
+* [Debugging test failure](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20181033.png)
+* [Tests pass](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20181430.png)
+
+
+
 ## CI/CD
 We continued using the same CI/CD system for front and back end as in the previous sprint.
 
 ### Back End
-Back end CI/CD leverages GitHub Actions with a workflow to first run all test and build the jar, and then deploy it to an AWS EC2 instance, with a final health check to make sure it's successfully launched.
+Back end CI/CD leverages GitHub Actions with a workflow in [maven.yml](.github/workflows/maven.yml) to first run all test and build the jar, and then deploy it to an AWS EC2 instance, with a final health check to make sure it's successfully launched.
 
 #### Screenshots
 * [All back end tests passing](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180444.png)
@@ -158,7 +186,9 @@ Back end CI/CD leverages GitHub Actions with a workflow to first run all test an
 * [CI/CD history, blocks deployment if tests fail](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180756.png)
 
 ### Front End
-Front end CI/CD uses AWS Amplify to first run all tests (using yarn), then build and deploy the web application.
+Front end CI/CD uses AWS Amplify with [amplify.yml](amplify.yml) to first run all tests (using yarn), then build and deploy the web application.
 
 #### Screenshots
 * [Front end CI/CD after completing SHY-75](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20190942.png)
+* [After failing a few times due to dependency issues, SHY-76 update successfully deployed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20183826.png)
+* [Front end update SHY-76 (date/time formatting) deployed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20183849.png)
