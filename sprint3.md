@@ -66,7 +66,7 @@ Screenshots taken since board disappears once sprint is completed.
 ## Group Programming
 
 ### Mob/Pair Programming 2024-12-04
-We split into two groups to do pair/group programming, one group focused on the back end SHY-4 issue and the other focused on the front end SHY-75 issue.  [Whole group image before splitting.](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20180504.png)
+We split into two groups to do pair/group programming, one group focused on the back end web scraping SHY-4 issue and the other focused on the front end default image SHY-75 issue.  [Whole group image before splitting.](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20180504.png)
 
 #### Back End
 * Hamza Hashmi
@@ -88,5 +88,35 @@ We split into two groups to do pair/group programming, one group focused on the 
 
 #### Whole Group Rejoins
 Yu had to leave, but the remaining 4 rejoined group - SHY-75 completed
-* [Front end CI/CD](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20190942.png)
 * [Updated front end](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20191042.png)
+
+### Mob Programming 2024-12-08
+We focused on the SHY-4 web scraping issue.
+
+#### Present
+* Shelby Grasso
+* Christina Molodowitch
+* Tyler Malka
+
+#### Screenshots
+* [Adding unit test](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20161927.png)
+* [Test fails (different test)](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20165557.png)
+* [Test passes after implementing method](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20165618.png)
+
+
+## CI/CD
+We continued using the same CI/CD system for front and back end as in the previous sprint.
+
+### Back End
+Back end CI/CD leverages GitHub Actions with a workflow to first run all test and build the jar, and then deploy it to an AWS EC2 instance, with a final health check to make sure it's successfully launched.
+
+#### Screenshots
+* [All back end tests passing](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180444.png)
+* [Successful deployment with health check](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180829.png)
+* [CI/CD history, blocks deployment if tests fail](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180756.png)
+
+### Front End
+Front end CI/CD uses AWS Amplify to first run all tests (using yarn), then build and deploy the web application.
+
+#### Screenshots
+* [Front end CI/CD after completing SHY-75](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20190942.png)
