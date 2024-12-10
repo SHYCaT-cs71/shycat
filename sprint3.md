@@ -7,6 +7,9 @@ Product website:
 * [Sprint Planning 2024-12-02](#sprint-planning-2024-12-02)
 * [Kanban Board](#kanban-board)
 * [Burndown Chart](#burndown-chart)
+* [Daily Scrum](#daily-scrum)
+* [Group Programming](#group-programming)
+* [CI/CD](#cicd)
 
 ChatGPT/AI was used for debugging and problem solving.
 
@@ -61,6 +64,45 @@ Screenshots taken since board disappears once sprint is completed.
 * [2024-12-04](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-04%20180546.png)
 * [2024-12-08](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-08%20160330.png)
 * [2024-12-09](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-09%20164634.png)
+
+
+## Daily Scrum
+
+### 2024-12-09
+
+#### Present
+* Shelby Grasso (Product Owner and Developer)
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (Scrum Master and Developer)
+
+#### Screenshots
+* [Group discussing, with notes](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20164426.png)
+
+#### What did you do in the last 24 hours that helped you meet the Sprint Goal?
+* **Shelby:** Participated in mob programming, working on web scraping functionality.
+* **Hamza:** Participated in pair programming, working on back end.
+* **Yu:** Participated in pair programming with Tyler and Shelby, working on front end.
+* **Christina:** Participated in mob programming, working on web scraping.
+* **Tyler:** Participated in mob/pair programming, working on back end.
+
+#### What will you do in the next 24 hours to meet the Sprint Goal?
+* **Shelby:** Participate in mob/pair programming, focused on front end.
+* **Hamza:** Continue with pair programming on back end.
+* **Yu:** Not sure?  (See impediment.)
+* **Christina:** Participate in mob/pair programming and write DDL SQL script to create MySQL schema/user/table.
+* **Tyler:** Participate in mob/pair programming.  Also make sure that group is prioritizing tasks for a successful final presentation, so that web-scraped data will be displayed on the live web site in production.
+
+#### Do you see any impediment that prevents the Developers from meeting the Sprint Goal? What are the impediments?
+* **Shelby:** None.
+* **Hamza:** None.
+* **Yu:** Wasn't available for the previous meeting, so not sure what to tackle next.
+* **Christina:** Lack of time (other responsibilities).
+* **Tyler:** None.
+
+#### What is your impediment removal plan?
+Update Yu on current team progress and get her input on next steps. 
 
 
 ## Group Programming
