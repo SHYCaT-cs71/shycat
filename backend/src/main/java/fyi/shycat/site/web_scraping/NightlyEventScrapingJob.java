@@ -16,7 +16,7 @@ public class NightlyEventScrapingJob {
 
     private static final Logger LOG = LoggerFactory.getLogger(NightlyEventScrapingJob.class);
 
-    private static final int DAYS_AHEAD_TO_SCRAPE = 14;
+    private static final int DAYS_AHEAD_TO_SCRAPE = 7;
 
     private final HarvardEventWebScraperImpl harvardEventWebScraper;
 
