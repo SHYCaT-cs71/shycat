@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
 
+import java.util.Objects;
+
 @Embeddable
 public class Location {
 
@@ -63,6 +65,20 @@ public class Location {
         this.geo = geo;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Location location = (Location) o;
+        return Objects.equals(type, location.type) && Objects.equals(name, location.name) &&
+               Objects.equals(address, location.address) &&
+               Objects.equals(locationUrl, location.locationUrl) && Objects.equals(geo, location.geo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, name, address, locationUrl, geo);
+    }
+
     @Embeddable
     public static class GeoLocation {
         @JsonProperty("geoType")
@@ -100,6 +116,19 @@ public class Location {
 
         public void setLongitude(double longitude) {
             this.longitude = longitude;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (o == null || getClass() != o.getClass()) return false;
+            GeoLocation that = (GeoLocation) o;
+            return Double.compare(latitude, that.latitude) == 0 &&
+                   Double.compare(longitude, that.longitude) == 0 && Objects.equals(type, that.type);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(type, latitude, longitude);
         }
     }
 
