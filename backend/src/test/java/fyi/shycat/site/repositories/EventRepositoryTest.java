@@ -27,30 +27,7 @@ public class EventRepositoryTest {
 
     @Test
     void testSave() {
-        var event = new Event();
-        event.setOriginalId("20010");
-        event.setTitle("Harvard Startup Showcase");
-        event.setSummary("An exciting showcase where Harvard entrepreneurs and innovators present their startup ideas.");
-        event.setDescription("This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds. Innovators pitch their projects to potential investors, gaining invaluable feedback and visibility. From tech startups to social enterprises, attendees will see a diverse array of ventures aimed at addressing real-world issues. It’s also a great networking opportunity for anyone interested in entrepreneurship and innovation.\",\n");
-        event.setStartDateTime(new DateTime(LocalDate.of(2024, 11, 25),
-                                            LocalTime.of(19, 20, 47)));
-        event.setEndDateTime(new DateTime(LocalDate.of(2024, 11, 25),
-                                          LocalTime.of(22, 5, 30)));
-
-        event.setHost("Harvard Innovation Labs");
-        event.setOriginalLink("https://example.com/harvard-startup-showcase");
-        event.setTags(Set.of("Entrepreneurship", "Startups", "Networking"));
-        event.setImageUrl("https://picsum.photos/800/600?random=1003");
-
-        var location = new Location();
-        location.setType("place");
-        location.setName("Sanders Theatre, Cambridge, MA");
-        location.setAddress("11 Divinity Avenue, Cambridge");
-        location.setLocationUrl("https://nonsense.com");
-        var geo = new Location.GeoLocation(42.377512, -71.114127);
-        location.setGeo(geo);
-        event.setLocation(location);
-
+        var event = createEvent(null, "Harvard Startup Showcase");
         assertThat(event.getId(), is(nullValue()));
 
         eventRepository.save(event);
@@ -107,6 +84,16 @@ public class EventRepositoryTest {
         assertThat(event.getEndDateTime().getTime(), is(nullValue()));
     }
 
+    @Test
+    void testGetEventByOriginalId() {
+        var result = eventRepository.getEventByOriginalId("10001");
+        assertThat(result.isPresent(), is(true));
+        checkEvent(result.get());
+
+        var result2 = eventRepository.getEventByOriginalId("nonsense");
+        assertThat(result2.isPresent(), is(false));
+    }
+
     void checkEvent(Event event) {
         assertThat(event.getOriginalId(), is("10001"));
         assertThat(event.getTitle(), is("Test title"));
@@ -140,5 +127,33 @@ public class EventRepositoryTest {
         assertThat(eventList, hasSize(5));
         eventList.sort(Comparator.comparing(Event::getId));
         checkEvent(eventList.getFirst());
+    }
+
+    public static Event createEvent(Long id, String title) {
+        var event = new Event();
+        event.setId(id);
+        event.setOriginalId("505050");
+        event.setTitle(title);
+        event.setSummary("Summary: " + title);
+        event.setDescription("Description: " + title);
+        event.setStartDateTime(new DateTime(LocalDate.of(2024, 11, 25),
+                                            LocalTime.of(19, 20, 47)));
+        event.setEndDateTime(new DateTime(LocalDate.of(2024, 11, 25),
+                                          LocalTime.of(22, 5, 30)));
+
+        event.setHost("Harvard Innovation Labs");
+        event.setOriginalLink("https://example.com/harvard-startup-showcase");
+        event.setTags(Set.of("Entrepreneurship", "Startups", "Networking"));
+        event.setImageUrl("https://picsum.photos/800/600?random=1003");
+
+        var location = new Location();
+        location.setType("place");
+        location.setName("Sanders Theatre, Cambridge, MA");
+        location.setAddress("11 Divinity Avenue, Cambridge");
+        location.setLocationUrl("https://nonsense.com");
+        var geo = new Location.GeoLocation(42.377512, -71.114127);
+        location.setGeo(geo);
+        event.setLocation(location);
+        return event;
     }
 }
