@@ -8,6 +8,8 @@ Product website:
 * [Kanban Board](#kanban-board)
 * [Burndown Chart](#burndown-chart)
 
+ChatGPT/AI was used for debugging and problem solving.
+
 
 ## Sprint Planning 2024-12-02
 
@@ -47,6 +49,8 @@ Screenshots taken since board disappears once sprint is completed.
 * [Start of sprint, child issues shown](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-02%20164730.png)
 * [Start of sprint, child issues shown 2](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-02%20172100.png)
 * [Start of sprint, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-02%20172116.png)
+* [Completed SHY-75](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-04%20191322.png)
+* [Completed SHY-76](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-04%20191547.png)
 
 
 ## Burndown Chart
