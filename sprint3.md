@@ -54,6 +54,9 @@ Screenshots taken since board disappears once sprint is completed.
 
 ### Screenshots
 * [Start of sprint](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-02%20172355.png)
+* [2024-12-04](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-04%20180546.png)
+* [2024-12-08](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-08%20160330.png)
+* [2024-12-09](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-09%20164634.png)
 
 
 ## Group Programming
