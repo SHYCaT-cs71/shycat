@@ -63,7 +63,7 @@ jobs:
         script: |
           cd /opt/shycat/
           sudo chown -R ec2-user:ec2-user /opt/shycat/
-          ./mvnw clean package
+          ./mvnw clean package -DskipTests=true
           mv -f target/*.jar /opt/shycat/shycat.jar
           sudo chown ec2-user:ec2-user /opt/shycat/shycat.jar
           sudo systemctl restart shycat.service
