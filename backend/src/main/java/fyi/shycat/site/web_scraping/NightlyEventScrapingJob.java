@@ -34,7 +34,7 @@ public class NightlyEventScrapingJob {
         scrapeHarvardEvents(startDate, startDate.plusDays(DAYS_AHEAD_TO_SCRAPE));
     }
 
-    @Scheduled(initialDelay = 1000)
+    @Scheduled(initialDelay = 10000)
     public void scrapeHarvardEvents_AtStartup() {
         LocalDate startDate = LocalDate.now();
         scrapeHarvardEvents(startDate, startDate.plusDays(DAYS_AHEAD_TO_SCRAPE));
