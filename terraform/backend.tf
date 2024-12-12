@@ -82,7 +82,7 @@ resource "aws_instance" "shycat_instance" {
 
     [Service]
     User=ec2-user
-    ExecStart=/usr/bin/java -jar /opt/shycat/shycat.jar --spring.config.location=file:///opt/shycat_properties/application.properties
+    ExecStart=/usr/bin/java -jar /opt/shycat/shycat.jar --spring.config.location=/opt/shycat_properties/application.properties
     Restart=always
     StandardOutput=journal
     StandardError=journal
