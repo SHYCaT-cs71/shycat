@@ -3,6 +3,10 @@ import { utcToZonedTime } from 'date-fns-tz';
 import { format, parseISO, parse, isValid } from 'date-fns';
 
 export const getEventSummary = (description) => {
+    if (!description) {
+        return ""
+    }
+
     return description.split(". ")[0] + ".";
 };
 
