@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-white shadow-lg px-4 py-3" role="navigation">
       <div className="flex-1 flex items-center justify-start">
-        <a className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors" data-testid="logo">
+        <a href="https://shycat.fyi" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors" data-testid="logo">
           SHYC&T
         </a>
       </div>

@@ -67,11 +67,12 @@ body {
 }
 
 /* Event Information */
-.event-info {
+.event-address {
   font-size: 0.9rem;
   color: #4b5563; /* Muted color for location and date */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
@@ -81,6 +82,9 @@ body {
 }
 
 .event-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #6b7280; /* Muted gray for date */
 }
 

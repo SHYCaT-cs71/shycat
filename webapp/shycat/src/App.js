@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import EventList from './components/EventList';
 import Event, { mockHarvardEvents } from './data/Event';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import EventDetail from './components/EventDetail';
+
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -43,17 +46,31 @@ function App() {
 
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      {/* Display section for fetched backend events */}
-      <section>
-        {events.length > 0 ? (
-          <EventList events={events} />
-        ) : (
-          <p>No events fetched from the backend yet.</p>
-        )}
-      </section>
-    </div>
+      <Routes>
+        <Route path="/" element={
+          <div className="App">
+            {/* Display section for fetched backend events */}
+            <section>
+              <h2>Events from Backend</h2>
+              {events.length > 0 ? (
+                <EventList events={events} />
+              ) : (
+                <p>No events fetched from the backend yet.</p>
+              )}
+            </section>
+
+            {/* TEMP: Display section for mock events */}
+            <section>
+              <h2>Mock Events</h2>
+              <EventList events={mockHarvardEvents} />
+            </section>
+          </div>
+        } />
+        <Route path="/events/:eventId" element={<EventDetail />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
