@@ -5,6 +5,7 @@ import fyi.shycat.site.repositories.EventRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,5 +26,11 @@ public class EventController {
     public List<Event> getEvents() {
         LOG.debug("getEvents");
         return eventRepository.findAll();
+    }
+
+    @GetMapping("{id}")
+    public Event getEvent(@PathVariable("id") long id) {
+        LOG.debug("getEvent {}", id);
+        return eventRepository.findById(id).orElse(null);
     }
 }
