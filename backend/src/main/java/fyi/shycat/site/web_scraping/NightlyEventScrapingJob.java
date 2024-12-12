@@ -28,7 +28,7 @@ public class NightlyEventScrapingJob {
         this.eventRepository = eventRepository;
     }
 
-    @Scheduled(cron = "0 15 23 * * *")
+    @Scheduled(cron = "0 45 19 * * *")
     public void scrapeHarvardEvents() {
         LocalDate startDate = LocalDate.now();
         scrapeHarvardEvents(startDate, startDate.plusDays(DAYS_AHEAD_TO_SCRAPE));
