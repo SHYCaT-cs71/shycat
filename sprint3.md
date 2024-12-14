@@ -56,6 +56,8 @@ Screenshots taken since board disappears once sprint is completed.
 * [Completed SHY-76](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-04%20191547.png)
 * [Completed SHY-77](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-09%20184005.png)
 * [Kanban status after SHY-77 completed, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-09%20220327.png)
+* [Kanban after SHY-4 completed, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-11%20214444.png)
+* [Same as above, showing child issues](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-11%20214459.png)
 
 
 ## Burndown Chart
@@ -66,6 +68,7 @@ Screenshots taken since board disappears once sprint is completed.
 * [2024-12-04](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-04%20180546.png)
 * [2024-12-08](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-08%20160330.png)
 * [2024-12-09](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-09%20164634.png)
+* [2024-12-11](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-11%20192700.png)
 
 
 ## Daily Scrum
