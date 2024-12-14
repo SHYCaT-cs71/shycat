@@ -1,7 +1,7 @@
-import React from 'react';
-import { utcToZonedTime } from 'date-fns-tz';
-import { format, parseISO, parse, isValid } from 'date-fns';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { format, parse, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
+
 
 export const getEventSummary = (description) => {
     if (!description) return "";
