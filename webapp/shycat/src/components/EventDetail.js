@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Event from '.././data/Event';
-import { formatDate } from './EventCard';
-import { utcToZonedTime } from 'date-fns-tz';
-import { format, parseISO, parse, isValid } from 'date-fns';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Event from ".././data/Event";
+import { formatDate } from "./EventCard";
 
 
 function EventDetail() {
@@ -35,7 +33,7 @@ function EventDetail() {
         };
 
         getEvent();
-    }, []);
+    }, [eventId]);
 
 
 
@@ -47,7 +45,7 @@ function EventDetail() {
             <div className="hero bg-slate-100 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
-                        src={event.imageUrl}
+                        src={event.imageUrl} alt={event.title}
                         className="max-w-sm rounded-lg shadow-2xl" />
                     <div className="flex flex-col justify-start gap-2">
                         <h1 className="text-5xl font-bold">{event.title}</h1>
@@ -57,7 +55,7 @@ function EventDetail() {
                         <p className="py-6">
                             {event.description}
                         </p>
-                        <a href={event.originalLink} target="_blank" className="btn btn-primary" > Register</a>
+                        <a href={event.originalLink} target="_blank" rel="noreferrer" className="btn btn-primary" > Register</a>
                     </div>
                 </div>
             </div>
