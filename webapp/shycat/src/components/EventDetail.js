@@ -55,7 +55,8 @@ function EventDetail() {
                         <p className="py-6">
                             {event.description}
                         </p>
-                        <a href={event.originalLink} target="_blank" rel="noreferrer" className="btn btn-primary" > Register</a>
+                        <a href={event.originalLink} target="_blank" rel="noopener noreferrer"
+                           className="btn btn-primary" > Register</a>
                     </div>
                 </div>
             </div>
