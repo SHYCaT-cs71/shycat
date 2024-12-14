@@ -10,7 +10,7 @@ import EventDetail from './components/EventDetail';
 function App() {
   const [events, setEvents] = useState([]);
   const [backendStatus, setBackendStatus] = useState('Checking...');
-  const backendUrl = process.env.REACT_APP_API_URL
+  const backendUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -37,7 +37,7 @@ function App() {
     };
 
     fetchEvents();
-  }, [backendUrl]);
+  }, [backendUrl, backendStatus]);
 
   // Log backendStatus whenever it changes
   useEffect(() => {
