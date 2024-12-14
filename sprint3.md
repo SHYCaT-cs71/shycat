@@ -155,7 +155,6 @@ We focused on the SHY-4 web scraping issue.
 ### Mob/Pair Programming 2024-12-09
 We split into two groups again, to focus separately on web scraping (SHY-4) for the back end and date/time formatting (SHY-77) for the front end.
 
-
 #### Back End
 * Hamza Hashmi
 * Christina Molodowitch
@@ -177,6 +176,23 @@ We split into two groups again, to focus separately on web scraping (SHY-4) for 
 * [Debugging test failure](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20181033.png)
 * [Tests pass](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20181430.png)
 
+
+### Mob/Pair Programming 2024-12-11
+We started by looking at the current state and remaining tasks, then split into two groups, to focus separately on back end tasks (finishing SHY-4 web scraping and adding a new endpoint for SHY-13) and front end tasks (starting on building the event details view for SHY-13).
+
+#### Present
+* Shelby Grasso (SHY-13)
+* Hamza Hashmi (SHY-4 and SHY-13)
+* Yu Lai (SHY-13)
+* Christina Molodowitch (SHY-4 and SHY-13)
+
+#### Screenshots
+* [Reviewing progress all together](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20192241.png)
+* [Ditto](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20195129.png)
+* [SHY-13 pair programming, building events view](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20202554.png)
+* [SHY-4 pair programming, setting up MySQL persistence](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20204229.png)
+* [SHY-4 fully deployed and live](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20204239.png)
+* [Adding new REST endpoint to support SHY-13](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20204500.png)
 
 
 ## CI/CD
