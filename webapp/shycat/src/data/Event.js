@@ -1,5 +1,6 @@
 class Event {
-    constructor({ 
+    constructor({
+        id,
         title,
         summary,
         description,
@@ -12,7 +13,8 @@ class Event {
         originalLink,
         tags,
         imageUrl
-     }) {
+    }) {
+        this.id = id;
         this.title = title;
         this.summary = summary;
         this.description = description || summary;
@@ -30,6 +32,7 @@ class Event {
 
 export const mockHarvardEvents = [
     new Event({
+        id: 1,
         title: "Harvard Startup Showcase",
         summary: "An exciting showcase where Harvard entrepreneurs and innovators present their startup ideas.",
         description: "This annual event brings together the Harvard community to witness and support the entrepreneurial ideas of Harvard's brightest minds. Innovators pitch their projects to potential investors, gaining invaluable feedback and visibility. From tech startups to social enterprises, attendees will see a diverse array of ventures aimed at addressing real-world issues. It’s also a great networking opportunity for anyone interested in entrepreneurship and innovation.",
@@ -39,7 +42,7 @@ export const mockHarvardEvents = [
         host: "Harvard Innovation Labs",
         originalLink: "https://example.com/harvard-startup-showcase",
         tags: ["Entrepreneurship", "Startups", "Networking"],
-       imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
+        imageUrl: `https://picsum.photos/800/600?random=${Math.random()}`
     }),
     new Event({
         title: "Veritas Forum: Ethics in AI",

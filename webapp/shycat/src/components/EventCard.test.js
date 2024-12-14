@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import EventCard, { getEventSummary } from './EventCard';
 import { mockHarvardEvents } from '../data/Event';
 import { format, parseISO } from 'date-fns';
+import {MemoryRouter} from "react-router-dom";
 
 
 // Match component logic for formatting dates
@@ -16,7 +17,7 @@ const formatDate = (dateString) => {
 const mockHarvardEvent = mockHarvardEvents[0];
 
 test('image exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const image = screen.getAllByRole("img");
   expect(image.length).toBe(1);
@@ -25,21 +26,21 @@ test('image exists', () => {
 });
 
 test('title exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const title = screen.getByText(mockHarvardEvent.title);
   expect(title).toBeInTheDocument();
 });
 
 test('summary exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const summary = screen.getByText(mockHarvardEvent.summary);
   expect(summary).toBeInTheDocument();
 });
 
 test('tags exist', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   mockHarvardEvent.tags.forEach((tag) => {
     expect(screen.getByText(tag)).toBeInTheDocument();
@@ -47,14 +48,14 @@ test('tags exist', () => {
 });
 
 test('location exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const location = screen.getByText('Location: ' + mockHarvardEvent.locationName);
   expect(location).toBeInTheDocument();
 });
 
 test('start date exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const formattedStartDate = `Start: ${formatDate(mockHarvardEvent.startDate)}`;
   const startDate = screen.getByText(formattedStartDate);
@@ -63,7 +64,7 @@ test('start date exists', () => {
 
 
 test('end date exists', () => {
-  render(<EventCard event={mockHarvardEvent} />);
+  render(<MemoryRouter><EventCard event={mockHarvardEvent} /></MemoryRouter>);
   
   const formattedEndDate = `End: ${formatDate(mockHarvardEvent.endDate)}`;
   const endDate = screen.getByText(formattedEndDate);
@@ -87,16 +88,18 @@ test("falls back to default image if imageUrl is invalid", () => {
   const fallbackUrl = "/shycatfallback.jpg";
 
   render(
-    <EventCard
-      event={{
-        imageUrl: invalidUrl,
-        title: "Test Event",
-        summary: "summary",
-        description: "description",
-        tags: [],
-        startDate: "2024-12-04",
-      }}
-    />
+      <MemoryRouter>
+        <EventCard
+          event={{
+            imageUrl: invalidUrl,
+            title: "Test Event",
+            summary: "summary",
+            description: "description",
+            tags: [],
+            startDate: "2024-12-04",
+          }}
+        />
+      </MemoryRouter>
   );
 
   const image = screen.getByRole("img");

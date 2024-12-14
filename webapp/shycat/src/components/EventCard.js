@@ -1,12 +1,10 @@
-import React from 'react';
-import { utcToZonedTime } from 'date-fns-tz';
-import { format, parseISO, parse, isValid } from 'date-fns';
+import React from "react";
+import { format, parse, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
+
 
 export const getEventSummary = (description) => {
-    if (!description) {
-        return ""
-    }
-
+    if (!description) return "";
     return description.split(". ")[0] + ".";
 };
 
@@ -38,29 +36,33 @@ const EventCard = ({ event }) => {
     }
 
     return (
-        <div data-testid="event-card" className="card card-compact bg-base-100 w-96 shadow-xl">
-            <figure>
-                <img
-                    src={event.imageUrl || "/shycatfallback.jpg"}
-                    alt={event.title || "Default Event Title"}
-                />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">{event.title}</h2>
-                <div className="event-info">
-                    {locationNameP}
-                    {locationAddressP}
-                    <p className="event-date">Start: {startDateFormatted}</p>
-                    {endDateP}
-                </div>
-                {summaryP}
-                <div className="card-tags">
-                    {event.tags.map((tag, index) => (
-                        <div className="badge badge-outline" key={index}>{tag}</div>
-                    ))}
+        <Link to={`/events/${event.id}`}>
+            <div data-testid="event-card" className="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <img
+                        src={event.imageUrl || "/shycatfallback.jpg"}
+                        alt={event.title || "Default Event Title"}
+                    />
+                </figure>
+                <div className="card-body">
+                    <h2 className="card-title">{event.title}</h2>
+                    <div className="event-address">
+                        {locationNameP}
+                        {locationAddressP}
+                    </div>
+                    <div className="event-date">
+                        <p>Start: {startDateFormatted}</p>
+                        {endDateP}
+                    </div>
+                    {summaryP}
+                    <div className="card-tags">
+                        {event.tags.map((tag, index) => (
+                            <div className="badge badge-outline" key={index}>{tag}</div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
