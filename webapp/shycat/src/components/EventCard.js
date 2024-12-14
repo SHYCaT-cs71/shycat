@@ -52,7 +52,7 @@ const EventCard = ({ event }) => {
                     </div>
                     <div className="event-date">
                         <p>Start: {startDateFormatted}</p>
-                        <p>{endDateP}</p>
+                        {endDateP}
                     </div>
                     {summaryP}
                     <div className="card-tags">
