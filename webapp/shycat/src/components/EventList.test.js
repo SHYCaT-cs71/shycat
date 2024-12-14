@@ -2,18 +2,20 @@ import { render, screen } from '@testing-library/react';
 import EventList from './EventList';
 import { getEventSummary } from "./EventCard";
 import { mockHarvardEvents } from '../data/Event';
-import { formatDate } from './EventCard'; // Import formatDate to match EventCard's logic
+import { formatDate } from './EventCard';
+import { MemoryRouter } from "react-router-dom"; 
+// Import formatDate to match EventCard's logic
 
 
 test('renders EventList with the correct number of EventCards', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     const eventCards = screen.getAllByTestId('event-card');
     expect(eventCards.length).toBe(mockHarvardEvents.length);
 });
 
 test('renders all events with correct titles', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
         const title = screen.getByText(event.title);
@@ -22,7 +24,7 @@ test('renders all events with correct titles', () => {
 });
 
 test('renders all events with correct summaries', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
         let summary;
@@ -37,7 +39,7 @@ test('renders all events with correct summaries', () => {
 });
 
 test('renders all events with correct locations', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
         const locationName = screen.getByText('Location: ' + event.locationName);
@@ -46,7 +48,7 @@ test('renders all events with correct locations', () => {
 });
 
 test('renders all events with correct start dates', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
         const formattedStartDate = `Start: ${formatDate(event.startDate)}`; // Use formatDate
@@ -56,7 +58,7 @@ test('renders all events with correct start dates', () => {
 });
 
 test('renders all events with correct end dates', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
         if (event.endDate) {
@@ -68,7 +70,7 @@ test('renders all events with correct end dates', () => {
 });
 
 test('renders all events with correct tags', () => {
-    render(<EventList events={mockHarvardEvents} />);
+    render(<MemoryRouter><EventList events={mockHarvardEvents} /></MemoryRouter>);
 
     mockHarvardEvents.forEach((event) => {
       event.tags.forEach((tag) => {
