@@ -156,6 +156,9 @@ class NightlyEventScrapingJobUnitTest {
             assertThat(result, is(true));
         }
 
+        // Tests below in this nested HasEventChangedTests class were generated using AI based on the
+        // manually-written example tests above
+
         @Test
         void hasEventChanged_Changed_Description() {
             newEvent.setDescription("New Description");
