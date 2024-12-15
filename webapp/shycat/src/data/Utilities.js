@@ -1,9 +1,10 @@
-const { format, parse, parseISO } = require("date-fns");
+import { format, parse, parseISO } from "date-fns";
+// const { format, parse, parseISO } = require("date-fns");
 
 // Move function to separate Utilities file that uses "require"
 // so it can also be used by Cucumber CommonJS style with require
 
-const formatDate = (dateString) => {
+export const formatDate = (dateString) => {
     try {
         const parsedDate = dateString.includes('T')
             ? parseISO(dateString)
@@ -16,4 +17,4 @@ const formatDate = (dateString) => {
 };
 
 // Explicitly export as part of module for use by Cucumber
-module.exports.formatDate = formatDate;
+// module.exports.formatDate = formatDate;
