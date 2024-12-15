@@ -6,6 +6,8 @@ import { formatDate } from "./EventCard";
 
 function EventDetail() {
 
+    const backendUrl = process.env.REACT_APP_API_URL;
+
     const [event, setEvent] = useState(new Event({}));
     const { eventId } = useParams();
     console.log("eventId:", eventId);
@@ -13,10 +15,10 @@ function EventDetail() {
     useEffect(() => {
         const getEvent = async () => {
 
-            console.log(`Fetching event ${eventId} from: https://api.shycat.fyi/events/${eventId}`);
+            console.log(`Fetching event ${eventId} from: ${backendUrl}/events/${eventId}`);
 
             try {
-                const response = await fetch(`https://api.shycat.fyi/events/${eventId}`);
+                const response = await fetch(`${backendUrl}/events/${eventId}`);
                 if (!response.ok) {
                     throw new Error(`Failed to fetch event, status: ${response.status}`);
                 }
