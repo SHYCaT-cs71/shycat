@@ -52,9 +52,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <div className="App">
-            {/* Display section for fetched backend events */}
             <section>
-              <h2>Events from Backend</h2>
               {events.length > 0 ? (
                 <EventList events={events} />
               ) : (
