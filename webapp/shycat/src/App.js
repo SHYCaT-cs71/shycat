@@ -25,6 +25,7 @@ function App() {
         const eventData = await response.json();
         // Parse events into Event class instances
         const eventInstances = eventData.map(event => new Event(event));
+        console.log(`Loaded ${eventInstances.length} events`);
         setEvents(eventInstances);
 
         setBackendStatus('Backend is reachable and events fetched successfully.');
@@ -59,12 +60,6 @@ function App() {
               ) : (
                 <p>No events fetched from the backend yet.</p>
               )}
-            </section>
-
-            {/* TEMP: Display section for mock events */}
-            <section>
-              <h2>Mock Events</h2>
-              <EventList events={mockHarvardEvents} />
             </section>
           </div>
         } />
