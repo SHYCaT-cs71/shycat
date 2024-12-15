@@ -38,9 +38,24 @@ function EventDetail() {
     }, [eventId]);
 
 
-
     const startDateFormatted = event.startDate ? formatDate(event.startDate) : "No start date";
     const endDateFormatted = event.endDate ? formatDate(event.endDate) : null;
+
+    let locationNameP;
+    if (event.locationName) {
+        locationNameP = <p className="event-location">Location: {event.locationName}</p>;
+    }
+
+    let locationAddressP;
+    if (event.locationAddress) {
+        locationAddressP = <p className="event-location">Address: {event.locationAddress}</p>;
+    }
+
+    let locationUrlP;
+    if (event.locationUrl) {
+        locationUrlP = <a href={event.locationUrl} target="_blank" rel="noopener noreferrer" 
+                          className="event-location">Event Link: {event.locationUrl}</a>;
+    }
 
     return (
         <div>
@@ -51,7 +66,9 @@ function EventDetail() {
                         className="max-w-sm rounded-lg shadow-2xl" />
                     <div className="flex flex-col justify-start gap-2">
                         <h1 className="text-5xl font-bold">{event.title}</h1>
-                        <p className="event-location">Location: {event.locationName}</p>
+                        {locationNameP}
+                        {locationAddressP}
+                        {locationUrlP}
                         <p className="event-location">Start Date: {startDateFormatted}</p>
                         <p className="event-location">End Date: {endDateFormatted}</p>
                         <p className="py-6">

@@ -24,7 +24,7 @@ test('EventList renders events with correct titles', async () => {
   render(<App />);
 
   // First find the title for the events to make sure the page has loaded
-  const app = await screen.findByText("Events from Backend");
+  const app = await screen.findByText("Upcoming Events");
   expect(app).toBeInTheDocument();
 
   // Then check that each event is present

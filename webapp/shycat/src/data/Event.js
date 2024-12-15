@@ -6,8 +6,10 @@ class Event {
         description,
         startDate,
         endDate,
+        locationType,
         locationName,
         locationAddress,
+        locationUrl,
         locationGeo,
         host,
         originalLink,
@@ -20,8 +22,10 @@ class Event {
         this.description = description || summary;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.locationType = locationType;
         this.locationName = locationName;
         this.locationAddress = locationAddress;
+        this.locationUrl = locationUrl;
         this.locationGeo = locationGeo;
         this.host = host;
         this.originalLink = originalLink;
