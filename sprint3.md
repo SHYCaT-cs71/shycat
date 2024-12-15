@@ -73,6 +73,8 @@ Screenshots taken since board disappears once sprint is completed.
 * [2024-12-08](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-08%20160330.png)
 * [2024-12-09](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-09%20164634.png)
 * [2024-12-11](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-11%20192700.png)
+* [2024-12-15](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-15%20161140.png)
+* [Last issue completed](images/screenshots/Sprint_2024-12-16/Burndown%20screenshot%202024-12-15%20171123.png)
 
 
 ## Daily Scrum
