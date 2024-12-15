@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -33,7 +34,7 @@ class EventControllerUnitTest {
     @Test
     void shouldReturnAllEvents() throws Exception {
         var events = Arrays.asList(createEvent(1L, "Event 1"), createEvent(2L, "Event 2"));
-        Mockito.when(eventRepository.findAll()).thenReturn(events);
+        Mockito.when(eventRepository.getEventsByStartDateTime_DateAfter(Mockito.any(LocalDate.class))).thenReturn(events);
 
         mvc.perform(get("/events"))
            .andExpect(status().isOk())

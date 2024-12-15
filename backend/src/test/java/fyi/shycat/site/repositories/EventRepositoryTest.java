@@ -78,9 +78,9 @@ public class EventRepositoryTest {
         var event = result.get();
         // Just check location and start/end times, other property load is already checked
         assertThat(event.getLocation(), is(nullValue()));
-        assertThat(event.getStartDateTime().getDate(), is(LocalDate.of(2024, 12, 20)));
+        assertThat(event.getStartDateTime().getDate(), is(LocalDate.of(2025, 2, 20)));
         assertThat(event.getStartDateTime().getTime(), is(nullValue()));
-        assertThat(event.getEndDateTime().getDate(), is(LocalDate.of(2024, 12, 22)));
+        assertThat(event.getEndDateTime().getDate(), is(LocalDate.of(2025, 2, 22)));
         assertThat(event.getEndDateTime().getTime(), is(nullValue()));
     }
 
@@ -127,6 +127,17 @@ public class EventRepositoryTest {
         assertThat(eventList, hasSize(5));
         eventList.sort(Comparator.comparing(Event::getId));
         checkEvent(eventList.getFirst());
+    }
+
+    @Test
+    void testGetEventsBy_StartDateTimeDateAfter() {
+        // Cutoff matches start date of event with time
+        var resultA = eventRepository.getEventsByStartDateTime_DateAfter(LocalDate.of(2024, 12, 5));
+        assertThat(resultA, hasSize(3));
+
+        // Cutoff matches start date of event without time
+        var resultB = eventRepository.getEventsByStartDateTime_DateAfter(LocalDate.of(2024, 12, 10));
+        assertThat(resultB, hasSize(2));
     }
 
     public static Event createEvent(Long id, String title) {

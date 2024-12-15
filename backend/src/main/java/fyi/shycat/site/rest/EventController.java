@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController()
@@ -25,7 +26,9 @@ public class EventController {
     @GetMapping("")
     public List<Event> getEvents() {
         LOG.debug("getEvents");
-        return eventRepository.findAll();
+        // Use yesterday as the cutoff since it excludes anything starting on the specified date -
+        // this way we'll get events starting today as well
+        return eventRepository.getEventsByStartDateTime_DateAfter(LocalDate.now().minusDays(1));
     }
 
     @GetMapping("{id}")

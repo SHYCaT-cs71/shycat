@@ -23,7 +23,7 @@ public class EventControllerIntegrationTest {
     void testGetAll() throws Exception {
         mvc.perform(get("/events").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.*", hasSize(5)));
+                .andExpect(jsonPath("$.*", hasSize(2)));
     }
 
     @Test
@@ -63,8 +63,8 @@ public class EventControllerIntegrationTest {
            .andExpect(jsonPath("$.description",
                                is("Join experts, students, and community leaders to discuss the latest research and solutions for environmental sustainability. Sessions will cover diverse topics, including climate action, renewable energy, and policy advocacy. The conference provides a platform for impactful discussions,\n" +
                                   "with workshops designed to inspire actionable solutions to pressing environmental issues.")))
-           .andExpect(jsonPath("$.startDate", is("2024-12-20")))
-           .andExpect(jsonPath("$.endDate", is("2024-12-22")))
+           .andExpect(jsonPath("$.startDate", is("2025-02-20")))
+           .andExpect(jsonPath("$.endDate", is("2025-02-22")))
            .andExpect(jsonPath("$.locationType").doesNotExist())
            .andExpect(jsonPath("$.locationName").doesNotExist())
            .andExpect(jsonPath("$.locationUrl").doesNotExist())
