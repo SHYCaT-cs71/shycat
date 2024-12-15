@@ -6,6 +6,7 @@ applications:
           commands:
             - yarn install --frozen-lockfile
             - CI=true yarn test
+            - yarn run test-bdd
         build:
           commands:
             - echo "FAST_REFRESH=false" >> .env

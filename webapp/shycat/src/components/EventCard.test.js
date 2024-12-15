@@ -1,18 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import EventCard, { getEventSummary } from './EventCard';
 import { mockHarvardEvents } from '../data/Event';
-import { format, parseISO } from 'date-fns';
 import {MemoryRouter} from "react-router-dom";
-
-
+import { formatDate } from "../data/Utilities";
 // Match component logic for formatting dates
-const formatDate = (dateString) => {
-  const parsedDate = dateString.includes('T')
-    ? parseISO(dateString)
-    : parse(dateString, 'yyyy-MM-dd', new Date());
-  const formatString = dateString.includes('T') ? 'MMMM do, yyyy h:mm a (zzz)' : 'MMMM do, yyyy';
-  return format(parsedDate, formatString);
-};
+
+
 
 const mockHarvardEvent = mockHarvardEvents[0];
 

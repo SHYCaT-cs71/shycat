@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Event from ".././data/Event";
-import { formatDate } from "./EventCard";
+import { formatDate } from "../data/Utilities";
 
 
 function EventDetail() {

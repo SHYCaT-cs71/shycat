@@ -2,9 +2,8 @@ import { render, screen } from '@testing-library/react';
 import EventList from './EventList';
 import { getEventSummary } from "./EventCard";
 import { mockHarvardEvents } from '../data/Event';
-import { formatDate } from './EventCard';
-import { MemoryRouter } from "react-router-dom"; 
-// Import formatDate to match EventCard's logic
+import { formatDate } from '../data/Utilities'; // Import formatDate to match EventCard's logic
+import { MemoryRouter } from "react-router-dom";
 
 
 test('renders EventList with the correct number of EventCards', () => {

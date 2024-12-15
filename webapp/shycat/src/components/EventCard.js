@@ -1,6 +1,7 @@
 import React from "react";
 import { format, parse, parseISO } from "date-fns";
 import { Link } from "react-router-dom";
+import { formatDate } from "../data/Utilities";
 
 
 export const getEventSummary = (description) => {
@@ -67,15 +68,3 @@ const EventCard = ({ event }) => {
 };
 
 export default EventCard;
-
-export const formatDate = (dateString) => {
-    try {
-        const parsedDate = dateString.includes('T')
-            ? parseISO(dateString)
-            : parse(dateString, 'yyyy-MM-dd', new Date());
-        const formatString = dateString.includes('T') ? 'MMMM do, yyyy h:mm a (zzz)' : 'MMMM do, yyyy';
-        return format(parsedDate, formatString);
-    } catch {
-        return 'Invalid Date';
-    }
-};
