@@ -43,10 +43,12 @@
     "transform": {},
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!(.*\\.mjs)|date-fns)"
-    ]
+    ],
+    "resetMocks": false
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "daisyui": "^4.12.14"
+    "daisyui": "^4.12.14",
+    "jest-fetch-mock": "^3.0.3"
   }
 }
