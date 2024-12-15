@@ -9,7 +9,9 @@ Product website:
 * [Burndown Chart](#burndown-chart)
 * [Daily Scrum](#daily-scrum)
 * [Group Programming](#group-programming)
+* [Tests Added](#tests-added)
 * [CI/CD](#cicd)
+* [Sprint Review Practice](#sprint-review-practice)
 
 ChatGPT/AI was used for debugging and problem solving.  It was also used to fill in the repetitive single-property change unit tests in NightlyEventScrapingJobUnitTest in the nested HasEventChangedTests class, based on two manually-written examples.  (We already had far more than the minimum 10 new tests added, but wanted to ensure that the `hasEventChanged()` method was thoroughly checked.)
 
@@ -264,3 +266,18 @@ Front end CI/CD uses AWS Amplify with [amplify.yml](amplify.yml) to first run al
 
 Retrospective
 https://miro.com/app/board/uXjVL2mbVi4=/
+
+
+## Sprint Review Practice
+Split demo between devs, went through basics of talk
+
+### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+### Screenshots
+* [Sample slide from review](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172547.png)
+* [Sample slide #2 from review](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172605.png)
