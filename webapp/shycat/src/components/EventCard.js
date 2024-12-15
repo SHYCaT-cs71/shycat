@@ -1,7 +1,6 @@
 import React from "react";
-import { format, parse, parseISO } from "date-fns";
 import { Link } from "react-router-dom";
-import { formatDate } from "../data/Utilities";
+import { formatDate } from "../data/Utilities.js";
 
 
 export const getEventSummary = (description) => {

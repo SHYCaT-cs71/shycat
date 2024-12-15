@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import EventList from './components/EventList';
-import Event, { mockHarvardEvents } from './data/Event';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EventDetail from './components/EventDetail';
+import './App.css';
+import Navbar from './components/Navbar.js';
+import EventList from './components/EventList.js';
+import Event from './data/Event.js';
+import EventDetail from './components/EventDetail.js';
 
 
 function App() {

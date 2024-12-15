@@ -52,5 +52,6 @@
     "@cucumber/cucumber": "^11.1.1",
     "daisyui": "^4.12.14",
     "jest-fetch-mock": "^3.0.3"
-  }
+  },
+  "type": "module"
 }

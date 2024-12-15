@@ -1,8 +1,7 @@
-const { format, parse, parseISO } = require("date-fns");
 
-const assert = require("assert");
-const { Given, When, Then } = require("@cucumber/cucumber");
-const { formatDate } = require("../../src/data/Utilities");
+import assert from "assert";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { formatDate } from "../../src/data/Utilities.js";
 
 Given('event start date is {string}', function (startDate) {
     this.startDate = startDate;
