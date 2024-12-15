@@ -60,6 +60,8 @@ Screenshots taken since board disappears once sprint is completed.
 * [Kanban status after SHY-77 completed, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-09%20220327.png)
 * [Kanban after SHY-4 completed, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-11%20214444.png)
 * [Same as above, showing child issues](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-11%20214459.png)
+* [Kanban after SHY-13 completed, all issues now done, child issues hidden](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-15%20171026.png)
+* [Same as above, showing child issues](images/screenshots/Sprint_2024-12-16/Kanban%20screenshot%202024-12-15%20171003.png)
 
 
 ## Burndown Chart
@@ -197,9 +199,25 @@ We started by looking at the current state and remaining tasks, then split into 
 * [Adding new REST endpoint to support SHY-13](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-11%20204500.png)
 
 
+### Mob Programming 2024-12-15
+We finished up the event details view for SHY-13 and tweaked the returned events list slightly to only include current events (today onward).  We also worked on adding the BDD tests using Cucumber.js (see screenshots in the [Tests Added - BDD Testing section](#bdd-testing) below).
+
+#### Present
+* Shelby Grasso
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka
+
+#### Screenshots
+* [Finishing event details component and tests](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20163729.png)
+* [All front end tests passing](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20163747.png)
+
+
 ## Tests Added
 ### Back end
 * Tests for new single event endpoint (2 in rest.EventControllerIntegrationTest, 1 in rest.EventControllerUnitTest)
+* Tests for new EventRepository methods `getEventByOriginalId()` and `getEventsByStartDateTime_DateAfter()` (2 tests)
 * All tests in web_scraping package
     * DateTimeDeserializerTest (2 tests)
     * HarvardEventWebScraperImplTest (21 tests)
@@ -207,6 +225,17 @@ We started by looking at the current state and remaining tasks, then split into 
 
 ### Front end
 * New test in EventCard.test.js to check use of default image.
+* All tests for new EventDetail component in EventDetail.test.js (3 tests).
+* New tests for `formatDate()` function in Utilities.test.js (2 tests).
+
+### BDD Testing
+Added use of cucumber.js library to front end, and added 2 scenarios for date format depending on whether time is included or not, in features directory under webapp/shycat.
+* [display_event_start.feature](webapp/shycat/features/display_event_start.feature)
+* [stepdefs.js](webapp/shycat/features/step_definitions/stepdefs.js)
+
+#### Screenshots
+* [Adding BDD tests](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20165512.png)
+* [Two scenarios, both passing](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20165639.png)
 
 
 ## CI/CD
@@ -219,11 +248,17 @@ Back end CI/CD leverages GitHub Actions with a workflow in [maven.yml](.github/w
 * [All back end tests passing](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180444.png)
 * [Successful deployment with health check](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180829.png)
 * [CI/CD history, blocks deployment if tests fail](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-08%20180756.png)
+* [Back end tests passing in CI/CD Github system](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20170902.png)
 
 ### Front End
-Front end CI/CD uses AWS Amplify with [amplify.yml](amplify.yml) to first run all tests (using yarn), then build and deploy the web application.
+Front end CI/CD uses AWS Amplify with [amplify.yml](amplify.yml) to first run all tests (using yarn), then build and deploy the web application.  It was updated to run the new BDD tests as well as the existing unit tests.
 
 #### Screenshots
 * [Front end CI/CD after completing SHY-75](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-04%20190942.png)
 * [After failing a few times due to dependency issues, SHY-76 update successfully deployed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20183826.png)
 * [Front end update SHY-76 (date/time formatting) deployed](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-09%20183849.png)
+* [Front end with BDD tests added](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20170649.png)
+
+
+Retrospective
+https://miro.com/app/board/uXjVL2mbVi4=/
