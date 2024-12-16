@@ -293,7 +293,8 @@ Given that main delta is the project being incomplete and lack of time to work o
 
 
 ## Sprint Review Practice
-Split demo between devs, went through basics of talk
+First pass: split demo between devs, went through basics of talk
+Final rehearsal on Monday 2024-12-16
 
 ### Present
 * Shelby Grasso
@@ -305,3 +306,7 @@ Split demo between devs, went through basics of talk
 ### Screenshots
 * [Sample slide from review](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172547.png)
 * [Sample slide #2 from review](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172605.png)
+* [Shelby covers intro](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-16%20143825.png)
+* [Demo 1](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-16%20144027.png)
+* [Demo 2](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-16%20144352.png)
+
