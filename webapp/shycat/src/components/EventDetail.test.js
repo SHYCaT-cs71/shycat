@@ -28,3 +28,23 @@ test('button exists', async () => {
   const button = await screen.findByText("Register");
   expect(button).toBeInTheDocument();
 });
+
+test('event link present for virtual location', async () => {
+    // Return virtual event
+    fetch.mockResponseOnce(JSON.stringify(mockHarvardEvents[4]));
+
+    render(<EventDetail />);
+
+    const eventLink = await screen.findByText("Event Link: https://example.com/virtual-zoom-event");
+    expect(eventLink).toBeInTheDocument();
+});
+
+test('event link not present for place', async () => {
+    render(<EventDetail />);
+
+    // Get the title to wait for it to render
+    await screen.findByText(mockHarvardEvents[0].title);
+
+    const eventLink = screen.queryByTestId("locationUrl");
+    expect(eventLink).not.toBeInTheDocument();
+});

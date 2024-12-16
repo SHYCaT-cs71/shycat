@@ -229,7 +229,7 @@ We finished up the event details view for SHY-13 and tweaked the returned events
 
 ### Front end
 * New test in EventCard.test.js to check use of default image.
-* All tests for new EventDetail component in EventDetail.test.js (3 tests).
+* All tests for new EventDetail component in EventDetail.test.js (5 tests).
 * New tests for `formatDate()` function in Utilities.test.js (2 tests).
 
 ### BDD Testing

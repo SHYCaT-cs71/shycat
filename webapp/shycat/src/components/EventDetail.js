@@ -52,8 +52,10 @@ function EventDetail() {
     }
 
     let locationUrlP;
-    if (event.locationUrl) {
-        locationUrlP = <a href={event.locationUrl} target="_blank" rel="noopener noreferrer" 
+    // For now, only display the event link if the location is virtual - we may want to
+    // display it as the link to the venue in future
+    if (event.locationUrl && event.locationType === "VirtualLocation") {
+        locationUrlP = <a data-testid="locationUrl" href={event.locationUrl} target="_blank" rel="noopener noreferrer"
                           className="event-location">Event Link: {event.locationUrl}</a>;
     }
 
