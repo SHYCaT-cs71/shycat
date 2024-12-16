@@ -285,10 +285,11 @@ Delta note groups:
 * Project is incomplete (6)
 * Steep learning curve (1)
 
+Given that main delta is the project being incomplete and lack of time to work on it going forward, added new backlog item [SHY-80](https://evilore.atlassian.net/browse/SHY-80) around streamlining the sprint planning and ensuring that item selection takes that into account. 
+
 ### Screenshots
 * [Pluses and Deltas filled in](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20171537.png)
 * [Notes grouped together](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172217.png)
-
 
 
 ## Sprint Review Practice
