@@ -264,8 +264,31 @@ Front end CI/CD uses AWS Amplify with [amplify.yml](amplify.yml) to first run al
 * [Front end with BDD tests added](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20170649.png)
 
 
-Retrospective
-https://miro.com/app/board/uXjVL2mbVi4=/
+## Sprint Retrospective 2024-12-15
+Present:
+* Shelby Grasso (Product Owner)
+* Hamza Hashmi
+* Yu Lai
+* Christina Molodowitch
+* Tyler Malka (Scrum Master)
+
+Used Plus-Delta Retrospective with [MIRO board](https://miro.com/app/board/uXjVL2mbVi4=/)
+
+Plus note groups:
+* Aesthetics achieved (4)
+* Got work done (5)
+* BDD implemented (2)
+* CI/CD works well (1)
+* More efficient (6)
+
+Delta note groups:
+* Project is incomplete (6)
+* Steep learning curve (1)
+
+### Screenshots
+* [Pluses and Deltas filled in](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20171537.png)
+* [Notes grouped together](images/screenshots/Sprint_2024-12-16/Screenshot%202024-12-15%20172217.png)
+
 
 
 ## Sprint Review Practice
